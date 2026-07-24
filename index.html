@@ -4,78 +4,240 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link rel="icon" href="assets\favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="assets\favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="author" content="Yilberth Andres" />
+    <meta
+      name="description"
+      content="Backend developer portfolio featuring experience with PHP, Python, JavaScript, Django, Laravel, REST APIs, SQL, and NoSQL."
+      data-i18n-content="meta.description"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://yilberthandres.github.io/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yilberthandres.github.io/" />
+    <meta property="og:title" content="Yilberth Andres | Backend Developer" data-i18n-content="meta.title" />
+    <meta
+      property="og:description"
+      content="Backend developer portfolio featuring experience with PHP, Python, JavaScript, Django, Laravel, REST APIs, SQL, and NoSQL."
+      data-i18n-content="meta.description"
+    />
+    <meta property="og:image" content="https://yilberthandres.github.io/assets/images/profile/profile-social.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Yilberth Andres | Backend Developer" data-i18n-content="meta.title" />
+    <meta
+      name="twitter:description"
+      content="Backend developer portfolio featuring experience with PHP, Python, JavaScript, Django, Laravel, REST APIs, SQL, and NoSQL."
+      data-i18n-content="meta.description"
+    />
+    <meta name="twitter:image" content="https://yilberthandres.github.io/assets/images/profile/profile-social.jpg" />
+    <title>Yilberth Andres | Backend Developer</title>
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon" />
+    <script>
+      (() => {
+        let savedTheme = null;
+
+        try {
+          savedTheme = localStorage.getItem("theme");
+        } catch {
+          // Use the system preference when storage is unavailable.
+        }
+
+        const initialTheme = ["light", "dark"].includes(savedTheme)
+          ? savedTheme
+          : "light";
+
+        document.documentElement.dataset.theme = initialTheme;
+      })();
+    </script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/responsive.css" />
   </head>
   <body>
     <nav id="desktop-nav">
       <div class="logo">Yilberth Andres</div>
-      <div>
+      <div class="desktop-nav-actions">
         <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about" data-i18n="nav.about">About</a></li>
+          <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+          <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
         </ul>
+        <label class="language-selector">
+          <svg class="language-selector__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"></path>
+          </svg>
+          <span class="sr-only" data-i18n="accessibility.language">Choose language</span>
+          <span class="language-selector__current" data-language-current>English</span>
+          <select data-language-select aria-label="Choose language">
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="pt">Português</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="ja">日本語</option>
+            <option value="zh">中文</option>
+          </select>
+        </label>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode">
+          <span class="theme-toggle__track" aria-hidden="true">
+            <span class="theme-toggle__thumb">
+              <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path>
+              </svg>
+              <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+              </svg>
+            </span>
+          </span>
+        </button>
       </div>
     </nav>
     <nav id="hamburger-nav">
       <div class="logo">Yilberth Andres</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      <div class="mobile-nav-actions">
+        <label class="language-selector language-selector--compact">
+          <svg class="language-selector__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"></path>
+          </svg>
+          <span class="sr-only" data-i18n="accessibility.language">Choose language</span>
+          <span class="language-selector__current" data-language-current>English</span>
+          <select data-language-select aria-label="Choose language">
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="pt">Português</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="ja">日本語</option>
+            <option value="zh">中文</option>
+          </select>
+        </label>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode">
+          <span class="theme-toggle__track" aria-hidden="true">
+            <span class="theme-toggle__thumb">
+              <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path>
+              </svg>
+              <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+              </svg>
+            </span>
+          </span>
+        </button>
+        <div class="hamburger-menu">
+          <button
+            class="hamburger-icon"
+            type="button"
+            data-menu-toggle
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            aria-label="Open navigation menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="menu-links" id="mobile-menu">
+            <li><a href="#about" data-i18n="nav.about">About</a></li>
+            <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+            <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+          </ul>
         </div>
       </div>
     </nav>
     <section id="profile">
       <div class="section__pic-container">
-        <img src="assets/perfil.png" alt="Yilberth Andres profile picture" />
+        <button
+          class="profile-image-button"
+          type="button"
+          data-profile-zoom
+          aria-haspopup="dialog"
+          aria-controls="profile-lightbox"
+          data-i18n-aria-label="accessibility.zoomProfile"
+          aria-label="Enlarge profile photo"
+        >
+          <img
+            src="assets/images/profile/profile-photo.webp"
+            width="445"
+            height="451"
+            fetchpriority="high"
+            alt="Yilberth Andres profile picture"
+            data-i18n-alt="accessibility.profilePhoto"
+          />
+        </button>
       </div>
       <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
+        <p class="section__text__p1" data-i18n="profile.greeting">Hello, I'm</p>
         <h1 class="title">Yilberth Andres</h1>
-        <p class="section__text__p2">Backend Developer</p>
+        <p class="section__text__p2" data-i18n="profile.role">Backend Developer</p>
         <div class="btn-container">
-          <button
+          <a
             class="btn btn-color-2"
-            onclick="window.open('./assets/hv.pdf')"
+            href="assets/documents/yilberth-andres-cv.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='#contact'">
-            Contact Info
-          </button>
+            <span data-i18n="profile.downloadCv">Download CV</span>
+          </a>
+          <a class="btn btn-color-1" href="#contact">
+            <span data-i18n="profile.contactInfo">Contact Info</span>
+          </a>
         </div>
         <div id="socials-container">
-          <a href="https://www.linkedin.com/in/yilberth-galarza-25a863248/" target="_blank">
-              <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon">
+          <a href="https://www.linkedin.com/in/yilberth-galarza-25a863248/" target="_blank" rel="noopener noreferrer">
+              <img src="./assets/icons/linkedin.png" alt="My LinkedIn profile" data-i18n-alt="accessibility.linkedin" class="icon">
           </a>
-          <a href="https://github.com/YilberthAndres" target="_blank">
-              <img src="./assets/github.png" alt="My Github profile" class="icon">
+          <a href="https://github.com/YilberthAndres" target="_blank" rel="noopener noreferrer">
+              <img src="./assets/icons/github.png" alt="My Github profile" data-i18n-alt="accessibility.github" class="icon">
           </a>
       </div>
       
       </div>
     </section>
+    <dialog
+      id="profile-lightbox"
+      class="profile-lightbox"
+      data-profile-lightbox
+      data-i18n-aria-label="accessibility.zoomProfile"
+      aria-label="Enlarged profile photo"
+    >
+      <button
+        class="profile-lightbox__close"
+        type="button"
+        data-profile-close
+        data-i18n-aria-label="accessibility.closePreview"
+        aria-label="Close image"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6 6l12 12M18 6 6 18"></path>
+        </svg>
+      </button>
+      <img
+        class="profile-lightbox__image"
+        src="assets/images/profile/profile-photo.webp"
+        width="445"
+        height="451"
+        loading="lazy"
+        alt="Yilberth Andres profile picture"
+        data-i18n-alt="accessibility.profilePhoto"
+      />
+    </dialog>
     <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
+      <p class="section__text__p1" data-i18n="about.eyebrow">Get To Know More</p>
+      <h1 class="title" data-i18n="about.title">About Me</h1>
       <div class="section-container">
         <div class="section__pic-container">
           <img
-            src="./assets/perfil2.jpg"
+            src="./assets/images/profile/profile-about.webp"
+            width="1000"
+            height="1000"
+            loading="lazy"
             alt="Profile picture"
+            data-i18n-alt="accessibility.aboutPhoto"
             class="about-pic"
           />
         </div>
@@ -83,283 +245,291 @@
           <div class="about-containers">
             <div class="details-container">
               <img
-                src="./assets/experience.png"
+                src="./assets/icons/experience.png"
                 alt="Experience icon"
+                data-i18n-alt="accessibility.experienceIcon"
                 class="icon"
               />
-              <h3>Experience</h3>
-              <p>4+ years <br /></p>
+              <h3 data-i18n="about.experience">Experience</h3>
+              <p data-i18n="about.years">4+ years</p>
             </div>
             <div class="details-container">
               <img
-                src="./assets/education.png"
+                src="./assets/icons/education.png"
                 alt="Education icon"
+                data-i18n-alt="accessibility.educationIcon"
                 class="icon"
               />
-              <h3>Education</h3>
-              <p>Systems engineer</p>
+              <h3 data-i18n="about.education">Education</h3>
+              <p data-i18n="about.degree">Systems Engineer</p>
             </div>
           </div>
           <div class="text-container">
-            <p>
+            <p data-i18n="about.description">
               I am passionate about technology and innovation. I am a systems engineer and specialize in programming, with primary experience in PHP, Python, and JavaScript. I have excelled in web application development using frameworks such as Django and Laravel. Additionally, I have expertise in creating REST APIs and managing both SQL and NoSQL databases.
             </p>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='#experience'"
-      />
+      <a href="#experience" class="arrow" data-i18n-aria-label="accessibility.nextSection" aria-label="Go to the next section">
+        <img src="./assets/icons/arrow.png" alt="" class="icon" />
+      </a>
     </section>
     <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
+      <p class="section__text__p1" data-i18n="experience.eyebrow">Explore My</p>
+      <h1 class="title" data-i18n="experience.title">Experience</h1>
+      <article class="career-card">
+        <div class="career-card__header">
+          <div>
+            <p class="career-card__label" data-i18n="experience.professional">Professional Experience</p>
+            <h2 data-i18n="experience.role">Full Stack Developer</h2>
+            <p class="career-card__company" data-i18n="experience.company">Newo SAS — Bogotá, Colombia</p>
+          </div>
+          <span class="career-card__period" data-experience-period>September 2022 — June 2026</span>
+        </div>
+        <p class="career-card__summary" data-i18n="experience.summary">
+          Backend and frontend development with Laravel and PHP, SQL database management, bug fixing, feature development, REST API creation, and remote collaboration.
+        </p>
+      </article>
       <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Programming languages</h2>
-            <div class="article-container">
+        <div class="about-containers experience-grid">
+          <div class="details-container skill-card">
+            <h2 class="experience-sub-title" data-i18n="experience.languages">Programming Languages</h2>
+            <div class="article-container skills-grid">
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./assets/icons/checkmark.png"
                   alt="Experience icon"
                   class="icon"
                 />
                 <div>
                   <h3>PHP</h3>
-                  <p>Experienced</p>
+                  <p data-i18n="experience.experienced">Experienced</p>
                 </div>
               </article>
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./assets/icons/checkmark.png"
                   alt="Experience icon"
                   class="icon"
                 />
                 <div>
                   <h3>JavaScript</h3>
-                  <p>Experienced</p>
+                  <p data-i18n="experience.experienced">Experienced</p>
                 </div>
               </article>
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./assets/icons/checkmark.png"
                   alt="Experience icon"
                   class="icon"
                 />
                 <div>
                   <h3>PYTHON</h3>
-                  <p>Intermediate</p>
+                  <p data-i18n="experience.intermediate">Intermediate</p>
                 </div>
               </article>
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./assets/icons/checkmark.png"
                   alt="Experience icon"
                   class="icon"
                 />
                 <div>
-                  <h3>
-                    JAVA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  </h3>
-                  <p>Basic</p>
+                  <h3>Java</h3>
+                  <p data-i18n="experience.basic">Basic</p>
                 </div>
               </article>
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./assets/icons/checkmark.png"
                   alt="Experience icon"
                   class="icon"
                 />
                 <div>
                   <h3>TypeScript</h3>
-                  <p>Basic</p>
+                  <p data-i18n="experience.basic">Basic</p>
                 </div>
               </article>
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./assets/icons/checkmark.png"
                   alt="Experience icon"
                   class="icon"
                 />
                 <div>
-                  <h3>
-                    C#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  </h3>
-                  <p>Basic</p>
+                  <h3>C#</h3>
+                  <p data-i18n="experience.basic">Basic</p>
                 </div>
               </article>
             </div>
           </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frameworks</h2>
-            <div class="article-container">
+          <div class="details-container skill-card">
+            <h2 class="experience-sub-title" data-i18n="experience.frameworks">Frameworks</h2>
+            <div class="article-container skills-grid">
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./assets/icons/checkmark.png"
                   alt="Experience icon"
                   class="icon"
                 />
                 <div>
                   <h3>Laravel</h3>
-                  <p>Experienced</p>
+                  <p data-i18n="experience.experienced">Experienced</p>
                 </div>
               </article>
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./assets/icons/checkmark.png"
                   alt="Experience icon"
                   class="icon"
                 />
                 <div>
-                  <h3>
-                    Yii&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  </h3>
-                  <p>Basic</p>
+                  <h3>Yii</h3>
+                  <p data-i18n="experience.basic">Basic</p>
                 </div>
               </article>
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./assets/icons/checkmark.png"
                   alt="Experience icon"
                   class="icon"
                 />
                 <div>
                   <h3>Django</h3>
-                  <p>Intermediate</p>
+                  <p data-i18n="experience.intermediate">Intermediate</p>
                 </div>
               </article>
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./assets/icons/checkmark.png"
                   alt="Experience icon"
                   class="icon"
                 />
                 <div>
-                  <h3>
-                    FastAPI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  </h3>
-                  <p>Basic</p>
+                  <h3>FastAPI</h3>
+                  <p data-i18n="experience.basic">Basic</p>
                 </div>
               </article>
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./assets/icons/checkmark.png"
                   alt="Experience icon"
                   class="icon"
                 />
                 <div>
-                  <h3>
-                    React.js&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  </h3>
-                  <p>Basic</p>
+                  <h3>React.js</h3>
+                  <p data-i18n="experience.basic">Basic</p>
                 </div>
               </article>
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./assets/icons/checkmark.png"
                   alt="Experience icon"
                   class="icon"
                 />
                 <div>
-                  <h3>
-                    Angular&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  </h3>
-                  <p>Basic</p>
+                  <h3>Angular</h3>
+                  <p data-i18n="experience.basic">Basic</p>
                 </div>
               </article>
             </div>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='#projects'"
-      />
+      <a href="#projects" class="arrow" data-i18n-aria-label="accessibility.nextSection" aria-label="Go to the next section">
+        <img src="./assets/icons/arrow.png" alt="" class="icon" />
+      </a>
     </section>
     <section id="projects">
-      <p class="section__text__p1">The main projects to which I have contributed</p>
-      <h1 class="title">Projects</h1>
+      <p class="section__text__p1" data-i18n="projects.eyebrow">The main projects I have contributed to</p>
+      <h1 class="title" data-i18n="projects.title">Projects</h1>
       <div class="experience-details-container">
-        <div class="about-containers">
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="./assets/tc.png" alt="Tucolegio.co" class="project-img" style="height: 245px;">
-                </div>
-                <h2 class="experience-sub-title project-title">Tucolegio.co</h2>
-                <div class="btn-container">
-                    <!-- <button class="btn btn-color-2 project-btn">
-                        Info
-                    </button> -->
-                    <a href="https://tucolegio.co" target="_blank">
-                        <button class="btn btn-color-2 project-btn">
-                            Live
-                        </button>
-                    </a>
-                </div>
+        <div class="about-containers project-grid">
+          <article class="details-container color-container project-card">
+            <div class="project-image-container">
+              <img
+                src="./assets/images/projects/tucolegio.webp"
+                width="512"
+                height="512"
+                loading="lazy"
+                alt="Tucolegio.co"
+                class="project-img"
+              />
             </div>
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="./assets/hd.png" alt="Human Data" class="project-img" style="height: 90%;">
-                </div>
-                <h2 class="experience-sub-title project-title">Human Data</h2>
-                <div class="btn-container">
-                    <!-- <button class="btn btn-color-2 project-btn">
-                        Info
-                    </button> -->
-                    <a href="https://humandata.com.co/" target="_blank">
-                        <button class="btn btn-color-2 project-btn">
-                            Live
-                        </button>
-                    </a>
-                </div>
+            <h2 class="experience-sub-title project-title">Tucolegio.co</h2>
+            <p class="project-description" data-i18n="projects.tucolegioDescription">
+              Educational management platform for schools and their communities.
+            </p>
+            <div class="btn-container">
+              <a class="btn btn-color-2 project-btn" href="https://www.tucolegio.co/" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="projects.live">Live</span>
+              </a>
             </div>
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="./assets/h.png" alt="D-HEALTH" class="project-img" style="height: 240px;">
-                </div>
-                <h2 class="experience-sub-title project-title">D-HEALTH</h2>
-                <div class="btn-container">
-                    <!-- <button class="btn btn-color-2 project-btn">
-                        Info
-                    </button> -->
-                    <a  target="_blank">
-                        <button class="btn btn-color-2 project-btn">
-                            Live
-                        </button>
-                    </a>
-                </div>
+          </article>
+          <article class="details-container color-container project-card">
+            <div class="project-image-container">
+              <img
+                src="./assets/images/projects/human-data.webp"
+                width="1075"
+                height="882"
+                loading="lazy"
+                alt="Human Data"
+                class="project-img"
+              />
             </div>
+            <h2 class="experience-sub-title project-title">Human Data</h2>
+            <p class="project-description" data-i18n="projects.humanDataDescription">
+              Candidate assessment platform with tools for talent management teams.
+            </p>
+            <div class="btn-container">
+              <a class="btn btn-color-2 project-btn" href="https://humandata.com.co/" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="projects.live">Live</span>
+              </a>
+            </div>
+          </article>
+          <article class="details-container color-container project-card">
+            <div class="project-image-container">
+              <img
+                src="./assets/images/projects/d-health.webp"
+                width="877"
+                height="520"
+                loading="lazy"
+                alt="D-HEALTH"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">D-HEALTH</h2>
+            <p class="project-description" data-i18n="projects.dHealthDescription">
+              Business solution for clinical records, scheduling, appointments, and medical reports.
+            </p>
+            <div class="btn-container">
+              <span class="btn btn-color-2 project-btn project-btn--disabled" aria-disabled="true" data-i18n="projects.private">
+                Private project
+              </span>
+            </div>
+          </article>
         </div>
-    </div>
-    
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='#contact'"
-      />
+      </div>
+      <a href="#contact" class="arrow" data-i18n-aria-label="accessibility.nextSection" aria-label="Go to the next section">
+        <img src="./assets/icons/arrow.png" alt="" class="icon" />
+      </a>
     </section>
     <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
+      <p class="section__text__p1" data-i18n="contact.eyebrow">Get in Touch</p>
+      <h1 class="title" data-i18n="contact.title">Contact Me</h1>
       <div class="contact-info-upper-container">
         <div class="contact-info-container">
-            <a href="mailto:yilberthgalarza444@gmail.com" target="_blank">
-                <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon">
+            <a href="mailto:yilberthgalarza444@gmail.com">
+                <img src="./assets/icons/email.png" alt="Email icon" data-i18n-alt="accessibility.email" class="icon contact-icon email-icon">
             </a>
-            <p><a href="mailto:yilberthgalarza444@gmail.com" target="_blank">Yilberthgalarza444@gmail.com</a></p>
+            <p><a href="mailto:yilberthgalarza444@gmail.com">Yilberthgalarza444@gmail.com</a></p>
         </div>
         <div class="contact-info-container">
-            <a href="https://wa.me/+573042115334" target="_blank">
-                <img src="./assets/whatsapp.png" alt="Whatsapp icon" class="icon contact-icon">
+            <a href="https://wa.me/573042115334" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/icons/whatsapp.png" alt="WhatsApp icon" data-i18n-alt="accessibility.whatsapp" class="icon contact-icon">
             </a>
-            <p><a href="https://wa.me/+573042115334" target="_blank">+57 3042115334</a></p>
+            <p><a href="https://wa.me/573042115334" target="_blank" rel="noopener noreferrer">+57 3042115334</a></p>
         </div>
     </div>
     
@@ -368,15 +538,16 @@
       <nav>
         <div class="nav-links-container">
           <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about" data-i18n="nav.about">About</a></li>
+            <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+            <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
           </ul>
         </div>
       </nav>
-      <p>Copyright &#169; <span id="year"></span> Yilberth Andres. All Rights Reserved.</p>
+      <p>Copyright &#169; <span id="year"></span> Yilberth Andres. <span data-i18n="footer.rights">All Rights Reserved.</span></p>
     </footer>
-    <script src="script.js?v1"></script>
+    <script src="scripts/i18n.js" defer></script>
+    <script src="scripts/main.js" defer></script>
   </body>
 </html>
