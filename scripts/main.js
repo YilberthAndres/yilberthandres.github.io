@@ -8,6 +8,7 @@ const profileZoom = document.querySelector("[data-profile-zoom]");
 const profileLightbox = document.querySelector("[data-profile-lightbox]");
 const profileClose = document.querySelector("[data-profile-close]");
 
+
 function saveTheme(theme) {
   try {
     localStorage.setItem("theme", theme);
