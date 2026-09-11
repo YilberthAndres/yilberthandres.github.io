@@ -5,10 +5,11 @@ Personal portfolio website built with HTML, CSS, and vanilla JavaScript.
 ## Features
 
 - Responsive layout for desktop, tablet, and mobile.
-- Light and dark themes with saved preferences.
+- Dark theme by default, with a light theme and saved preferences.
 - Content available in seven languages.
 - Accessible mobile navigation and profile image viewer.
 - Optimized WebP images and social sharing metadata.
+- Dedicated section for the personal mobile apps (Vestigra and RioPool), with CSS phone mockups.
 
 ## Project structure
 
@@ -25,9 +26,13 @@ Personal portfolio website built with HTML, CSS, and vanilla JavaScript.
     |-- documents/
     |-- icons/
     `-- images/
+        |-- apps/
         |-- profile/
         `-- projects/
 ```
+
+The `design/` folder holds the source artboards of the redesign canvas; it is
+not part of the published site.
 
 ## Run locally
 

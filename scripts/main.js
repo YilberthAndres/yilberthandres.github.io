@@ -31,7 +31,7 @@ function updateThemeControls(theme) {
     toggle.title = nextThemeLabel;
   });
 
-  themeColor?.setAttribute("content", isDark ? "#0f1115" : "#ffffff");
+  themeColor?.setAttribute("content", isDark ? "#0b0f0d" : "#f5f4ef");
 }
 
 function setTheme(theme, persist = false) {
@@ -97,7 +97,7 @@ profileLightbox?.addEventListener("close", () => {
   profileZoom?.focus();
 });
 
-setTheme(root.dataset.theme || "light");
+setTheme(root.dataset.theme || "dark");
 
 document.addEventListener("languagechange", () => {
   updateThemeControls(root.dataset.theme);

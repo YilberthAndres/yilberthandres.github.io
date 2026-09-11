@@ -1,0 +1,341 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <style>
+    body { margin: 0; background: #0B0F0D; }
+    .page {
+      --bg: #0B0F0D;
+      --bg-2: #101614;
+      --bg-3: #161E1A;
+      --line: #212A25;
+      --line-2: #2F3A34;
+      --fg: #F1F4EF;
+      --fg-2: #A5B0A9;
+      --fg-3: #6C776F;
+      --accent: #64DBAE;
+      --accent-ink: #06110C;
+      --accent-soft: rgba(100, 219, 174, 0.12);
+      --cyan: #4DD0E1;
+      --cyan-soft: rgba(77, 208, 225, 0.12);
+      font-family: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--fg); text-decoration: none; }
+    a:hover { color: var(--accent); }
+    h1, h2, h3, h4, p, ul, li { margin: 0; padding: 0; }
+    ul { list-style: none; }
+    button { font: inherit; cursor: pointer; }
+    .em { font-family: 'Instrument Serif', 'Iowan Old Style', Georgia, serif; font-style: italic; font-weight: 400; color: var(--accent); }
+    .mono { font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; }
+  </style>
+</helmet>
+
+<div class="page" style="background: var(--bg); color: var(--fg); min-height: 100%; overflow: hidden;">
+
+  <header style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; border-bottom: 1px solid var(--line);">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <span style="display: flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 9px; background: var(--accent); color: var(--accent-ink); font-size: 13px; font-weight: 600;">YA</span>
+      <span style="font-size: 15px; font-weight: 500;">Yilberth Andrés</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <span style="display: flex; align-items: center; justify-content: center; gap: 6px; width: 60px; height: 44px; border: 1px solid var(--line-2); border-radius: 999px; color: var(--fg-2);">
+        <svg viewBox="0 0 24 24" style="width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round;"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"></path></svg>
+        <span class="mono" style="font-size: 11px;">EN</span>
+      </span>
+      <span style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid var(--line-2); border-radius: 999px; color: var(--fg-2);">
+        <svg viewBox="0 0 24 24" style="width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path></svg>
+      </span>
+      <span style="display: flex; flex-direction: column; justify-content: center; gap: 5px; width: 44px; height: 44px; padding: 0 11px; border-radius: 999px; background: var(--bg-2); box-sizing: border-box;">
+        <span style="display: block; height: 1.5px; background: var(--fg);"></span>
+        <span style="display: block; height: 1.5px; background: var(--fg);"></span>
+        <span style="display: block; height: 1.5px; background: var(--fg);"></span>
+      </span>
+    </div>
+  </header>
+
+  <section style="display: flex; flex-direction: column; gap: 26px; padding: 44px 20px 40px 20px;">
+    <div class="mono" style="display: flex; align-items: center; gap: 10px; font-size: 10px; letter-spacing: 0.14em; color: var(--fg-3);">
+      <span style="width: 6px; height: 6px; border-radius: 999px; background: var(--accent);"></span>
+      <span>BACKEND DEVELOPER — BOGOTÁ, CO</span>
+    </div>
+    <h1 style="font-size: 44px; font-weight: 500; line-height: 1.02; letter-spacing: -0.04em;">
+      Backends, APIs and mobile apps that <span class="em">hold up</span> in production.
+    </h1>
+    <p style="font-size: 16px; line-height: 1.65; color: var(--fg-2);">
+      Systems engineer with 4+ years building web platforms in Laravel, PHP and Django — and two Android apps of my own.
+    </p>
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+      <a href="#work" style="display: flex; align-items: center; justify-content: center; gap: 10px; height: 52px; border-radius: 999px; background: var(--accent); color: var(--accent-ink); font-size: 16px; font-weight: 500;">
+        View projects
+        <svg viewBox="0 0 24 24" style="width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round;"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </a>
+      <a href="#cv" style="display: flex; align-items: center; justify-content: center; gap: 10px; height: 52px; border: 1px solid var(--line-2); border-radius: 999px; font-size: 16px; color: var(--fg);">
+        <svg viewBox="0 0 24 24" style="width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round;"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"></path></svg>
+        Download CV
+      </a>
+    </div>
+    <div style="position: relative; border: 1px solid var(--line); border-radius: 4px; overflow: hidden;">
+      <img src="profile-photo.webp" alt="Yilberth Andrés" style="display: block; width: 100%; height: 340px; object-fit: cover; object-position: 50% 22%;" />
+      <span class="mono" style="position: absolute; left: 14px; bottom: 14px; padding: 7px 12px; border-radius: 999px; background: rgba(6, 17, 12, 0.72); color: #F1F4EF; font-size: 10px; letter-spacing: 0.14em;">SYSTEMS ENGINEER</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <a href="https://www.linkedin.com/in/yilberth-galarza-25a863248/" style="display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border: 1px solid var(--line); border-radius: 999px; color: var(--fg-2);">
+        <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: currentColor;"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.76-1.95C21.4 8.75 22 11.1 22 14.1V21h-4v-6.1c0-1.45-.03-3.3-2.03-3.3-2.03 0-2.34 1.57-2.34 3.2V21h-4V9Z"></path></svg>
+      </a>
+      <a href="https://github.com/YilberthAndres" style="display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border: 1px solid var(--line); border-radius: 999px; color: var(--fg-2);">
+        <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: currentColor;"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85l-.01 2.75c0 .26.18.58.69.48A10 10 0 0 0 12 2Z"></path></svg>
+      </a>
+      <a href="mailto:yilberthgalarza444@gmail.com" style="display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border: 1px solid var(--line); border-radius: 999px; color: var(--fg-2);">
+        <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round;"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3.5 7 8.5 6 8.5-6"></path></svg>
+      </a>
+    </div>
+  </section>
+
+  <div class="mono" style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; padding: 16px 20px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--bg-2); font-size: 10px; letter-spacing: 0.12em; color: var(--fg-3);">
+    <span style="color: var(--fg-2);">PHP</span><span>LARAVEL</span><span>PYTHON</span><span>DJANGO</span><span>JAVASCRIPT</span><span>REST APIs</span><span>SQL / NoSQL</span><span>KOTLIN</span><span>FLUTTER</span>
+  </div>
+
+  <section id="about" style="display: flex; flex-direction: column; gap: 26px; padding: 52px 20px;">
+    <div style="display: flex; align-items: baseline; gap: 14px;">
+      <span class="mono" style="font-size: 11px; letter-spacing: 0.16em; color: var(--accent);">01</span>
+      <span class="mono" style="font-size: 11px; letter-spacing: 0.16em; color: var(--fg-3);">ABOUT</span>
+    </div>
+    <h2 style="font-size: 30px; font-weight: 500; line-height: 1.15; letter-spacing: -0.03em;">
+      I like the problems that live <span class="em">behind the screen</span> — data models, APIs, and the glue that keeps them honest.
+    </h2>
+    <p style="font-size: 16px; line-height: 1.7; color: var(--fg-2);">
+      I'm a systems engineer specialised in programming, with primary experience in PHP, Python and JavaScript. I build web applications with Laravel and Django, design REST APIs, and manage SQL and NoSQL databases. Lately I've taken that backend thinking into mobile: two Android apps I designed, built and published on my own.
+    </p>
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px;">
+      <div style="display: flex; flex-direction: column; gap: 8px; padding: 18px; background: var(--bg-2); border: 1px solid var(--line); border-radius: 4px;">
+        <span style="font-size: 19px; font-weight: 500;">4+ years</span>
+        <span class="mono" style="font-size: 9px; letter-spacing: 0.14em; color: var(--fg-3);">EXPERIENCE</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px; padding: 18px; background: var(--bg-2); border: 1px solid var(--line); border-radius: 4px;">
+        <span style="font-size: 19px; font-weight: 500;">Systems Eng.</span>
+        <span class="mono" style="font-size: 9px; letter-spacing: 0.14em; color: var(--fg-3);">EDUCATION</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" style="display: flex; flex-direction: column; gap: 20px; padding: 0 20px 52px 20px;">
+    <div style="display: flex; align-items: baseline; gap: 14px;">
+      <span class="mono" style="font-size: 11px; letter-spacing: 0.16em; color: var(--accent);">02</span>
+      <span class="mono" style="font-size: 11px; letter-spacing: 0.16em; color: var(--fg-3);">EXPERIENCE</span>
+    </div>
+    <article style="display: flex; flex-direction: column; gap: 14px; padding: 24px; background: var(--bg-2); border: 1px solid var(--line); border-radius: 6px;">
+      <span class="mono" style="font-size: 10px; letter-spacing: 0.14em; color: var(--accent);">SEP 2022 — JUN 2026 · REMOTE</span>
+      <h3 style="font-size: 22px; font-weight: 500; letter-spacing: -0.025em;">Full Stack Developer</h3>
+      <span style="font-size: 14px; color: var(--fg-2);">Newo SAS — Bogotá, Colombia</span>
+      <p style="font-size: 15px; line-height: 1.65; color: var(--fg-2);">
+        Backend and frontend development with Laravel and PHP, SQL database management, bug fixing and feature development, REST API creation, and remote collaboration.
+      </p>
+    </article>
+    <div style="display: flex; flex-direction: column; gap: 18px; padding: 24px; border: 1px solid var(--line); border-radius: 6px;">
+      <h4 class="mono" style="font-size: 10px; font-weight: 500; letter-spacing: 0.16em; color: var(--fg-3);">CORE STACK</h4>
+      <ul style="display: flex; flex-direction: column; gap: 14px;">
+        <li style="display: flex; align-items: center; justify-content: space-between; gap: 16px;"><span style="font-size: 15px;">PHP · Laravel</span><span style="display: flex; gap: 4px;"><span style="width: 20px; height: 4px; border-radius: 999px; background: var(--accent);"></span><span style="width: 20px; height: 4px; border-radius: 999px; background: var(--accent);"></span><span style="width: 20px; height: 4px; border-radius: 999px; background: var(--accent);"></span></span></li>
+        <li style="display: flex; align-items: center; justify-content: space-between; gap: 16px;"><span style="font-size: 15px;">JavaScript</span><span style="display: flex; gap: 4px;"><span style="width: 20px; height: 4px; border-radius: 999px; background: var(--accent);"></span><span style="width: 20px; height: 4px; border-radius: 999px; background: var(--accent);"></span><span style="width: 20px; height: 4px; border-radius: 999px; background: var(--accent);"></span></span></li>
+        <li style="display: flex; align-items: center; justify-content: space-between; gap: 16px;"><span style="font-size: 15px;">Python · Django</span><span style="display: flex; gap: 4px;"><span style="width: 20px; height: 4px; border-radius: 999px; background: var(--accent);"></span><span style="width: 20px; height: 4px; border-radius: 999px; background: var(--accent);"></span><span style="width: 20px; height: 4px; border-radius: 999px; background: var(--line-2);"></span></span></li>
+        <li style="display: flex; align-items: center; justify-content: space-between; gap: 16px;"><span style="font-size: 15px;">Kotlin · Compose</span><span style="display: flex; gap: 4px;"><span style="width: 20px; height: 4px; border-radius: 999px; background: var(--accent);"></span><span style="width: 20px; height: 4px; border-radius: 999px; background: var(--accent);"></span><span style="width: 20px; height: 4px; border-radius: 999px; background: var(--line-2);"></span></span></li>
+        <li style="display: flex; align-items: center; justify-content: space-between; gap: 16px;"><span style="font-size: 15px;">Dart · Flutter</span><span style="display: flex; gap: 4px;"><span style="width: 20px; height: 4px; border-radius: 999px; background: var(--accent);"></span><span style="width: 20px; height: 4px; border-radius: 999px; background: var(--accent);"></span><span style="width: 20px; height: 4px; border-radius: 999px; background: var(--line-2);"></span></span></li>
+        <li style="display: flex; align-items: center; justify-content: space-between; gap: 16px;"><span style="font-size: 15px;">SQL · NoSQL</span><span style="display: flex; gap: 4px;"><span style="width: 20px; height: 4px; border-radius: 999px; background: var(--accent);"></span><span style="width: 20px; height: 4px; border-radius: 999px; background: var(--accent);"></span><span style="width: 20px; height: 4px; border-radius: 999px; background: var(--accent);"></span></span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="work" style="display: flex; flex-direction: column; gap: 20px; padding: 0 20px 52px 20px;">
+    <div style="display: flex; align-items: baseline; gap: 14px;">
+      <span class="mono" style="font-size: 11px; letter-spacing: 0.16em; color: var(--accent);">03</span>
+      <span class="mono" style="font-size: 11px; letter-spacing: 0.16em; color: var(--fg-3);">SELECTED WORK</span>
+    </div>
+    <h2 style="font-size: 30px; font-weight: 500; line-height: 1.15; letter-spacing: -0.03em;">Platforms I helped build, <span class="em">apps I built myself</span>.</h2>
+
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; padding: 6px; border: 1px solid var(--line); border-radius: 999px; background: var(--bg-2);">
+      <button type="button" onClick="{{ showWeb }}" style="display: flex; align-items: center; justify-content: center; gap: 8px; height: 46px; border: none; border-radius: 999px; font-size: 14px; background: {{ tabs.web.bg }}; color: {{ tabs.web.fg }};">
+        Web
+        <span class="mono" style="font-size: 11px; opacity: 0.72;">03</span>
+      </button>
+      <button type="button" onClick="{{ showMobile }}" style="display: flex; align-items: center; justify-content: center; gap: 8px; height: 46px; border: none; border-radius: 999px; font-size: 14px; background: {{ tabs.mob.bg }}; color: {{ tabs.mob.fg }};">
+        Mobile
+        <span class="mono" style="font-size: 11px; opacity: 0.72;">02</span>
+      </button>
+    </div>
+
+    <sc-if value="{{ isWeb }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <article style="display: flex; flex-direction: column; background: var(--bg-2); border: 1px solid var(--line); border-radius: 6px; overflow: hidden;">
+          <div style="height: 150px; padding: 20px; background: var(--bg-3); border-bottom: 1px solid var(--line); box-sizing: border-box;">
+            <img src="tucolegio.webp" alt="Tucolegio.co" style="display: block; width: 100%; height: 100%; object-fit: contain;" />
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 12px; padding: 22px;">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+              <h3 style="font-size: 20px; font-weight: 500;">Tucolegio.co</h3>
+              <span class="mono" style="padding: 5px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-size: 9px; letter-spacing: 0.12em;">LIVE</span>
+            </div>
+            <p style="font-size: 15px; line-height: 1.6; color: var(--fg-2);">Educational management platform for schools and their communities.</p>
+            <a href="https://www.tucolegio.co/" style="display: flex; align-items: center; gap: 8px; font-size: 15px; color: var(--accent);">tucolegio.co<svg viewBox="0 0 24 24" style="width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round;"><path d="M7 17 17 7M9 7h8v8"></path></svg></a>
+          </div>
+        </article>
+        <article style="display: flex; flex-direction: column; background: var(--bg-2); border: 1px solid var(--line); border-radius: 6px; overflow: hidden;">
+          <div style="height: 150px; padding: 20px; background: var(--bg-3); border-bottom: 1px solid var(--line); box-sizing: border-box;">
+            <img src="human-data.webp" alt="Human Data" style="display: block; width: 100%; height: 100%; object-fit: contain;" />
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 12px; padding: 22px;">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+              <h3 style="font-size: 20px; font-weight: 500;">Human Data</h3>
+              <span class="mono" style="padding: 5px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-size: 9px; letter-spacing: 0.12em;">LIVE</span>
+            </div>
+            <p style="font-size: 15px; line-height: 1.6; color: var(--fg-2);">Candidate assessment platform for talent management teams.</p>
+            <a href="https://humandata.com.co/" style="display: flex; align-items: center; gap: 8px; font-size: 15px; color: var(--accent);">humandata.com.co<svg viewBox="0 0 24 24" style="width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round;"><path d="M7 17 17 7M9 7h8v8"></path></svg></a>
+          </div>
+        </article>
+        <article style="display: flex; flex-direction: column; background: var(--bg-2); border: 1px solid var(--line); border-radius: 6px; overflow: hidden;">
+          <div style="height: 150px; padding: 20px; background: var(--bg-3); border-bottom: 1px solid var(--line); box-sizing: border-box;">
+            <img src="d-health.webp" alt="D-HEALTH" style="display: block; width: 100%; height: 100%; object-fit: contain;" />
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 12px; padding: 22px;">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+              <h3 style="font-size: 20px; font-weight: 500;">D-HEALTH</h3>
+              <span class="mono" style="padding: 5px 10px; border: 1px solid var(--line-2); border-radius: 999px; color: var(--fg-3); font-size: 9px; letter-spacing: 0.12em;">PRIVATE</span>
+            </div>
+            <p style="font-size: 15px; line-height: 1.6; color: var(--fg-2);">Clinical records, scheduling, appointments and medical reports.</p>
+          </div>
+        </article>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ true }}">
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+
+        <article style="display: flex; flex-direction: column; gap: 18px; padding: 24px; background: var(--bg-2); border: 1px solid var(--line); border-radius: 6px;">
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <img src="vestigra-logo.png" alt="Vestigra app icon" style="display: block; width: 56px; height: 56px; border-radius: 14px;" />
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+              <h3 style="font-size: 24px; font-weight: 500; letter-spacing: -0.03em;">Vestigra</h3>
+              <span class="mono" style="align-self: flex-start; padding: 5px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-size: 9px; letter-spacing: 0.12em;">PERSONAL · ANDROID</span>
+            </div>
+          </div>
+          <p style="font-size: 17px; line-height: 1.55; color: var(--fg);">
+            Find any name, number or code <span class="em">inside your own photos</span> — without a single image leaving the phone.
+          </p>
+          <ul style="display: flex; flex-direction: column; gap: 11px;">
+            <li style="display: flex; gap: 10px; font-size: 14px; line-height: 1.55; color: var(--fg-2);"><span style="margin-top: 7px; width: 5px; height: 5px; flex: 0 0 auto; border-radius: 999px; background: var(--accent);"></span>On-device OCR with ML Kit — no uploads.</li>
+            <li style="display: flex; gap: 10px; font-size: 14px; line-height: 1.55; color: var(--fg-2);"><span style="margin-top: 7px; width: 5px; height: 5px; flex: 0 0 auto; border-radius: 999px; background: var(--accent);"></span>Private full-text index in Room + FTS.</li>
+            <li style="display: flex; gap: 10px; font-size: 14px; line-height: 1.55; color: var(--fg-2);"><span style="margin-top: 7px; width: 5px; height: 5px; flex: 0 0 auto; border-radius: 999px; background: var(--accent);"></span>Matches highlighted on the photo itself.</li>
+          </ul>
+          <div style="display: flex; flex-wrap: wrap; gap: 7px;">
+            <span class="mono" style="padding: 6px 11px; border: 1px solid var(--line-2); border-radius: 999px; font-size: 9px; letter-spacing: 0.1em; color: var(--fg-3);">KOTLIN</span>
+            <span class="mono" style="padding: 6px 11px; border: 1px solid var(--line-2); border-radius: 999px; font-size: 9px; letter-spacing: 0.1em; color: var(--fg-3);">COMPOSE</span>
+            <span class="mono" style="padding: 6px 11px; border: 1px solid var(--line-2); border-radius: 999px; font-size: 9px; letter-spacing: 0.1em; color: var(--fg-3);">ML KIT</span>
+            <span class="mono" style="padding: 6px 11px; border: 1px solid var(--line-2); border-radius: 999px; font-size: 9px; letter-spacing: 0.1em; color: var(--fg-3);">ROOM / FTS</span>
+          </div>
+          <a href="https://www.vestigra.site" style="display: flex; align-items: center; justify-content: center; gap: 9px; height: 50px; border-radius: 999px; background: var(--accent); color: var(--accent-ink); font-size: 15px; font-weight: 500;">
+            vestigra.site
+            <svg viewBox="0 0 24 24" style="width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round;"><path d="M7 17 17 7M9 7h8v8"></path></svg>
+          </a>
+        </article>
+
+        <article style="display: flex; flex-direction: column; gap: 18px; padding: 24px; background: var(--bg-2); border: 1px solid var(--line); border-radius: 6px;">
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <span style="display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 14px; background: #FFFFFF; border: 1px solid var(--line-2); box-sizing: border-box;">
+              <img src="riopool-logo.png" alt="RioPool app icon" style="display: block; width: 46px; height: 46px;" />
+            </span>
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+              <h3 style="font-size: 24px; font-weight: 500; letter-spacing: -0.03em;">RioPool</h3>
+              <span class="mono" style="align-self: flex-start; padding: 5px 10px; border-radius: 999px; background: var(--cyan-soft); color: var(--cyan); font-size: 9px; letter-spacing: 0.12em;">PERSONAL · ANDROID · iOS</span>
+            </div>
+          </div>
+          <p style="font-size: 17px; line-height: 1.55; color: var(--fg);">
+            Water quality monitoring for pools: sensors report in, the dashboard <span class="em">reacts in real time</span>.
+          </p>
+          <ul style="display: flex; flex-direction: column; gap: 11px;">
+            <li style="display: flex; gap: 10px; font-size: 14px; line-height: 1.55; color: var(--fg-2);"><span style="margin-top: 7px; width: 5px; height: 5px; flex: 0 0 auto; border-radius: 999px; background: var(--cyan);"></span>One Flutter codebase, four platforms.</li>
+            <li style="display: flex; gap: 10px; font-size: 14px; line-height: 1.55; color: var(--fg-2);"><span style="margin-top: 7px; width: 5px; height: 5px; flex: 0 0 auto; border-radius: 999px; background: var(--cyan);"></span>REST history plus a live WebSocket channel.</li>
+            <li style="display: flex; gap: 10px; font-size: 14px; line-height: 1.55; color: var(--fg-2);"><span style="margin-top: 7px; width: 5px; height: 5px; flex: 0 0 auto; border-radius: 999px; background: var(--cyan);"></span>Out-of-range alerts and push notifications.</li>
+          </ul>
+          <div style="display: flex; flex-wrap: wrap; gap: 7px;">
+            <span class="mono" style="padding: 6px 11px; border: 1px solid var(--line-2); border-radius: 999px; font-size: 9px; letter-spacing: 0.1em; color: var(--fg-3);">FLUTTER</span>
+            <span class="mono" style="padding: 6px 11px; border: 1px solid var(--line-2); border-radius: 999px; font-size: 9px; letter-spacing: 0.1em; color: var(--fg-3);">DART</span>
+            <span class="mono" style="padding: 6px 11px; border: 1px solid var(--line-2); border-radius: 999px; font-size: 9px; letter-spacing: 0.1em; color: var(--fg-3);">REST API</span>
+            <span class="mono" style="padding: 6px 11px; border: 1px solid var(--line-2); border-radius: 999px; font-size: 9px; letter-spacing: 0.1em; color: var(--fg-3);">WEBSOCKETS</span>
+          </div>
+          <a href="https://pool.riogym.site" style="display: flex; align-items: center; justify-content: center; gap: 9px; height: 50px; border-radius: 999px; background: var(--fg); color: var(--bg); font-size: 15px; font-weight: 500;">
+            pool.riogym.site
+            <svg viewBox="0 0 24 24" style="width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round;"><path d="M7 17 17 7M9 7h8v8"></path></svg>
+          </a>
+        </article>
+      </div>
+    </sc-if>
+  </section>
+
+  <section id="contact" style="display: flex; flex-direction: column; gap: 22px; padding: 0 20px 48px 20px;">
+    <div style="display: flex; align-items: baseline; gap: 14px;">
+      <span class="mono" style="font-size: 11px; letter-spacing: 0.16em; color: var(--accent);">04</span>
+      <span class="mono" style="font-size: 11px; letter-spacing: 0.16em; color: var(--fg-3);">CONTACT</span>
+    </div>
+    <h2 style="font-size: 32px; font-weight: 500; line-height: 1.1; letter-spacing: -0.035em;">Got a backend that needs building — or <span class="em">rescuing</span>?</h2>
+    <a href="mailto:yilberthgalarza444@gmail.com" style="display: flex; align-items: center; justify-content: center; gap: 10px; height: 52px; border-radius: 999px; background: var(--accent); color: var(--accent-ink); font-size: 16px; font-weight: 500;">
+      Send me an email
+      <svg viewBox="0 0 24 24" style="width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round;"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+    </a>
+    <div style="display: flex; flex-direction: column; padding: 0 22px; background: var(--bg-2); border: 1px solid var(--line); border-radius: 6px;">
+      <a href="mailto:yilberthgalarza444@gmail.com" style="display: flex; align-items: center; gap: 14px; padding: 18px 0; border-bottom: 1px solid var(--line);">
+        <svg viewBox="0 0 24 24" style="width: 19px; height: 19px; flex: 0 0 auto; fill: none; stroke: var(--accent); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round;"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3.5 7 8.5 6 8.5-6"></path></svg>
+        <span style="display: flex; flex-direction: column; gap: 3px;">
+          <span class="mono" style="font-size: 9px; letter-spacing: 0.14em; color: var(--fg-3);">EMAIL</span>
+          <span style="font-size: 14px;">yilberthgalarza444@gmail.com</span>
+        </span>
+      </a>
+      <a href="https://wa.me/573042115334" style="display: flex; align-items: center; gap: 14px; padding: 18px 0;">
+        <svg viewBox="0 0 24 24" style="width: 19px; height: 19px; flex: 0 0 auto; fill: none; stroke: var(--accent); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round;"><path d="M20.5 11.6a8.4 8.4 0 0 1-12.4 7.4L3.5 20.5l1.6-4.5A8.4 8.4 0 1 1 20.5 11.6Z"></path><path d="M8.8 8.6c.3-.6.6-.6.9-.6h.7c.2 0 .5 0 .7.6l.7 1.7c.1.3 0 .5-.1.7l-.4.5c-.1.2-.3.3-.1.6.4.7 1.4 1.8 2.4 2.3.3.2.5.1.6 0l.5-.6c.2-.2.4-.2.6-.1l1.6.8c.3.1.5.3.5.5 0 .6-.4 1.6-1.6 1.7-1 .1-2.5-.3-4.3-1.8-1.7-1.5-2.7-3.3-2.8-4.3-.1-.9.2-1.6.6-2Z"></path></svg>
+        <span style="display: flex; flex-direction: column; gap: 3px;">
+          <span class="mono" style="font-size: 9px; letter-spacing: 0.14em; color: var(--fg-3);">WHATSAPP</span>
+          <span style="font-size: 14px;">+57 304 211 5334</span>
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <footer style="display: flex; flex-direction: column; gap: 14px; padding: 26px 20px 34px 20px; border-top: 1px solid var(--line);">
+    <nav style="display: flex; align-items: center; gap: 20px; font-size: 13px; color: var(--fg-3); flex-wrap: wrap;">
+      <a href="#about" style="color: var(--fg-3);">About</a>
+      <a href="#experience" style="color: var(--fg-3);">Experience</a>
+      <a href="#work" style="color: var(--fg-3);">Work</a>
+      <a href="#contact" style="color: var(--fg-3);">Contact</a>
+    </nav>
+    <span class="mono" style="font-size: 10px; letter-spacing: 0.12em; color: var(--fg-3);">© 2026 YILBERTH ANDRÉS</span>
+  </footer>
+</div>
+</x-dc>
+<script data-dc-script data-props='{"$preview":{"width":390,"height":3320}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { tab: 'mobile' };
+  }
+
+  renderVals() {
+    const isWeb = this.state.tab === 'web';
+    const on = { bg: 'var(--accent)', fg: 'var(--accent-ink)' };
+    const off = { bg: 'transparent', fg: 'var(--fg-2)' };
+
+    return {
+      isWeb: isWeb,
+      isMobile: !isWeb,
+      tabs: { web: isWeb ? on : off, mob: isWeb ? off : on },
+      showWeb: () => this.setState({ tab: 'web' }),
+      showMobile: () => this.setState({ tab: 'mobile' })
+    };
+  }
+}
+</script>
+</body>
+</html>
