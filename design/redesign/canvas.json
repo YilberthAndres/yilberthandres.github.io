@@ -1,0 +1,32 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html", "title": "Home — desktop 1440", "x": 0, "y": 0, "w": 1440, "h": 4400, "is_interactive": true },
+    { "file": "Mobile.dc.html", "title": "Home — phone 390", "x": 1560, "y": 0, "w": 390, "h": 3320, "is_interactive": true },
+    { "file": "MobileApps.dc.html", "title": "New section — Mobile apps", "x": 2070, "y": 0, "w": 1440, "h": 1620 },
+    { "file": "System.dc.html", "title": "Design system", "x": 2070, "y": 1740, "w": 1240, "h": 1420 }
+  ],
+  "annotations": [
+    {
+      "id": "brief",
+      "x": 0,
+      "y": -200,
+      "w": 420,
+      "text": "Editorial dark direction.\nThe theme toggle and the Web / Mobile tabs are live — click them on the desktop and phone boards.\nDesktop opens on the Web tab, the phone board on Mobile, so both states are visible at once."
+    },
+    {
+      "id": "mobile-apps-note",
+      "x": 2070,
+      "y": -200,
+      "w": 460,
+      "text": "New section: Mobile apps.\nCopy comes from the two repos (README, AGENTS, theme files). The readings on the phone screens (27.4 °C, pH 7.2, recibo 4820) are sample values to show the UI — not real data."
+    },
+    {
+      "id": "todo",
+      "x": 2560,
+      "y": -200,
+      "w": 460,
+      "text": "Two things to confirm:\n1. Kotlin, Dart, Flutter and Compose are marked Intermediate — your call on the level.\n2. Google Play link is left off Vestigra until the listing is public."
+    }
+  ],
+  "launch": { "view": "canvas" }
+}

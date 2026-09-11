@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <style>
+    body { margin: 0; background: #0B0F0D; }
+    .sheet {
+      --bg: #0B0F0D;
+      --bg-2: #101614;
+      --bg-3: #161E1A;
+      --line: #212A25;
+      --line-2: #2F3A34;
+      --fg: #F1F4EF;
+      --fg-2: #A5B0A9;
+      --fg-3: #6C776F;
+      --accent: #64DBAE;
+      --accent-ink: #06110C;
+      --accent-soft: rgba(100, 219, 174, 0.12);
+      --cyan: #4DD0E1;
+      font-family: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--fg); }
+    h1, h2, h3, h4, p, ul, li { margin: 0; padding: 0; }
+    ul { list-style: none; }
+    .em { font-family: 'Instrument Serif', 'Iowan Old Style', Georgia, serif; font-style: italic; font-weight: 400; color: var(--accent); }
+    .mono { font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; }
+  </style>
+</helmet>
+
+<div class="sheet" style="background: var(--bg); color: var(--fg); min-height: 100%; padding: 56px 56px 64px 56px; box-sizing: border-box; display: flex; flex-direction: column; gap: 48px;">
+
+  <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; padding-bottom: 28px; border-bottom: 1px solid var(--line);">
+    <div style="display: flex; flex-direction: column; gap: 14px;">
+      <span class="mono" style="font-size: 11px; letter-spacing: 0.16em; color: var(--accent);">DESIGN SYSTEM</span>
+      <h1 style="font-size: 40px; font-weight: 500; letter-spacing: -0.035em;">Tokens, type and <span class="em">the parts</span></h1>
+    </div>
+    <span class="mono" style="font-size: 11px; letter-spacing: 0.12em; color: var(--fg-3);">DROP-IN REPLACEMENT FOR styles/main.css :root</span>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px;">
+    <div style="display: flex; flex-direction: column; gap: 18px;">
+      <h2 class="mono" style="font-size: 11px; font-weight: 500; letter-spacing: 0.16em; color: var(--fg-3);">DARK — DEFAULT</h2>
+      <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px;">
+        <div style="display: flex; flex-direction: column; gap: 8px;"><span style="height: 64px; border-radius: 4px; background: #0B0F0D; border: 1px solid var(--line-2);"></span><span class="mono" style="font-size: 9px; letter-spacing: 0.06em; color: var(--fg-3);">--bg<br />#0B0F0D</span></div>
+        <div style="display: flex; flex-direction: column; gap: 8px;"><span style="height: 64px; border-radius: 4px; background: #101614; border: 1px solid var(--line-2);"></span><span class="mono" style="font-size: 9px; letter-spacing: 0.06em; color: var(--fg-3);">--bg-2<br />#101614</span></div>
+        <div style="display: flex; flex-direction: column; gap: 8px;"><span style="height: 64px; border-radius: 4px; background: #161E1A; border: 1px solid var(--line-2);"></span><span class="mono" style="font-size: 9px; letter-spacing: 0.06em; color: var(--fg-3);">--bg-3<br />#161E1A</span></div>
+        <div style="display: flex; flex-direction: column; gap: 8px;"><span style="height: 64px; border-radius: 4px; background: #2F3A34;"></span><span class="mono" style="font-size: 9px; letter-spacing: 0.06em; color: var(--fg-3);">--line-2<br />#2F3A34</span></div>
+        <div style="display: flex; flex-direction: column; gap: 8px;"><span style="height: 64px; border-radius: 4px; background: #F1F4EF;"></span><span class="mono" style="font-size: 9px; letter-spacing: 0.06em; color: var(--fg-3);">--fg<br />#F1F4EF</span></div>
+        <div style="display: flex; flex-direction: column; gap: 8px;"><span style="height: 64px; border-radius: 4px; background: #A5B0A9;"></span><span class="mono" style="font-size: 9px; letter-spacing: 0.06em; color: var(--fg-3);">--fg-2<br />#A5B0A9</span></div>
+        <div style="display: flex; flex-direction: column; gap: 8px;"><span style="height: 64px; border-radius: 4px; background: #64DBAE;"></span><span class="mono" style="font-size: 9px; letter-spacing: 0.06em; color: var(--fg-3);">--accent<br />#64DBAE</span></div>
+        <div style="display: flex; flex-direction: column; gap: 8px;"><span style="height: 64px; border-radius: 4px; background: #4DD0E1;"></span><span class="mono" style="font-size: 9px; letter-spacing: 0.06em; color: var(--fg-3);">--cyan<br />#4DD0E1</span></div>
+      </div>
+      <p style="font-size: 14px; line-height: 1.6; color: var(--fg-2);">The accent is Vestigra's own dark-theme green, so the site and the app read as one hand.</p>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 18px;">
+      <h2 class="mono" style="font-size: 11px; font-weight: 500; letter-spacing: 0.16em; color: var(--fg-3);">LIGHT</h2>
+      <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px;">
+        <div style="display: flex; flex-direction: column; gap: 8px;"><span style="height: 64px; border-radius: 4px; background: #F5F4EF;"></span><span class="mono" style="font-size: 9px; letter-spacing: 0.06em; color: var(--fg-3);">--bg<br />#F5F4EF</span></div>
+        <div style="display: flex; flex-direction: column; gap: 8px;"><span style="height: 64px; border-radius: 4px; background: #FFFFFF;"></span><span class="mono" style="font-size: 9px; letter-spacing: 0.06em; color: var(--fg-3);">--bg-2<br />#FFFFFF</span></div>
+        <div style="display: flex; flex-direction: column; gap: 8px;"><span style="height: 64px; border-radius: 4px; background: #E4E2D9;"></span><span class="mono" style="font-size: 9px; letter-spacing: 0.06em; color: var(--fg-3);">--line<br />#E4E2D9</span></div>
+        <div style="display: flex; flex-direction: column; gap: 8px;"><span style="height: 64px; border-radius: 4px; background: #D3D1C6;"></span><span class="mono" style="font-size: 9px; letter-spacing: 0.06em; color: var(--fg-3);">--line-2<br />#D3D1C6</span></div>
+        <div style="display: flex; flex-direction: column; gap: 8px;"><span style="height: 64px; border-radius: 4px; background: #121714;"></span><span class="mono" style="font-size: 9px; letter-spacing: 0.06em; color: var(--fg-3);">--fg<br />#121714</span></div>
+        <div style="display: flex; flex-direction: column; gap: 8px;"><span style="height: 64px; border-radius: 4px; background: #55605A;"></span><span class="mono" style="font-size: 9px; letter-spacing: 0.06em; color: var(--fg-3);">--fg-2<br />#55605A</span></div>
+        <div style="display: flex; flex-direction: column; gap: 8px;"><span style="height: 64px; border-radius: 4px; background: #006C51;"></span><span class="mono" style="font-size: 9px; letter-spacing: 0.06em; color: var(--fg-3);">--accent<br />#006C51</span></div>
+        <div style="display: flex; flex-direction: column; gap: 8px;"><span style="height: 64px; border-radius: 4px; background: #00757D;"></span><span class="mono" style="font-size: 9px; letter-spacing: 0.06em; color: var(--fg-3);">--cyan<br />#00757D</span></div>
+      </div>
+      <p style="font-size: 14px; line-height: 1.6; color: var(--fg-2);">Light keeps the same roles, darker accents so text on white still clears contrast.</p>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: minmax(0, 1fr) 440px; gap: 40px; padding-top: 8px; border-top: 1px solid var(--line);">
+    <div style="display: flex; flex-direction: column; gap: 22px; padding-top: 32px;">
+      <h2 class="mono" style="font-size: 11px; font-weight: 500; letter-spacing: 0.16em; color: var(--fg-3);">TYPE</h2>
+      <div style="display: flex; flex-direction: column; gap: 18px;">
+        <div style="display: flex; align-items: baseline; gap: 20px;">
+          <span class="mono" style="width: 130px; flex: 0 0 auto; font-size: 10px; letter-spacing: 0.1em; color: var(--fg-3);">DISPLAY 88/500</span>
+          <span style="font-size: 48px; font-weight: 500; letter-spacing: -0.045em;">Archivo</span>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 20px;">
+          <span class="mono" style="width: 130px; flex: 0 0 auto; font-size: 10px; letter-spacing: 0.1em; color: var(--fg-3);">SECTION 44/500</span>
+          <span style="font-size: 34px; font-weight: 500; letter-spacing: -0.035em;">Platforms I helped build</span>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 20px;">
+          <span class="mono" style="width: 130px; flex: 0 0 auto; font-size: 10px; letter-spacing: 0.1em; color: var(--fg-3);">ACCENT ITALIC</span>
+          <span class="em" style="font-size: 34px;">apps I built myself</span>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 20px;">
+          <span class="mono" style="width: 130px; flex: 0 0 auto; font-size: 10px; letter-spacing: 0.1em; color: var(--fg-3);">BODY 17/1.7</span>
+          <span style="font-size: 17px; line-height: 1.7; color: var(--fg-2); max-width: 420px;">I build web applications, design REST APIs and manage SQL and NoSQL databases.</span>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 20px;">
+          <span class="mono" style="width: 130px; flex: 0 0 auto; font-size: 10px; letter-spacing: 0.1em; color: var(--fg-3);">META 11/0.16em</span>
+          <span class="mono" style="font-size: 11px; letter-spacing: 0.16em; color: var(--fg-3);">JETBRAINS MONO — LABELS, DATES, TAGS</span>
+        </div>
+      </div>
+      <p style="font-size: 14px; line-height: 1.6; color: var(--fg-2); max-width: 560px;">Three faces, one job each: Archivo carries the page, Instrument Serif italic marks a single phrase per headline, JetBrains Mono handles every label. Poppins goes away.</p>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 22px; padding: 32px 0 0 40px; border-left: 1px solid var(--line);">
+      <h2 class="mono" style="font-size: 11px; font-weight: 500; letter-spacing: 0.16em; color: var(--fg-3);">PARTS</h2>
+
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px;">
+        <span style="display: flex; align-items: center; gap: 9px; height: 48px; padding: 0 22px; border-radius: 999px; background: var(--accent); color: var(--accent-ink); font-size: 15px; font-weight: 500;">Primary
+          <svg viewBox="0 0 24 24" style="width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round;"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+        </span>
+        <span style="display: flex; align-items: center; height: 48px; padding: 0 22px; border: 1px solid var(--line-2); border-radius: 999px; font-size: 15px; color: var(--fg);">Ghost</span>
+        <span style="display: flex; align-items: center; justify-content: center; width: 46px; height: 46px; border: 1px solid var(--line); border-radius: 999px; color: var(--fg-2);">
+          <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: currentColor;"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85l-.01 2.75c0 .26.18.58.69.48A10 10 0 0 0 12 2Z"></path></svg>
+        </span>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 8px; align-self: flex-start; padding: 6px; border: 1px solid var(--line); border-radius: 999px; background: var(--bg-2);">
+        <span style="display: flex; align-items: center; gap: 8px; height: 42px; padding: 0 20px; border-radius: 999px; background: var(--accent); color: var(--accent-ink); font-size: 14px;">Web<span class="mono" style="font-size: 11px; opacity: 0.72;">03</span></span>
+        <span style="display: flex; align-items: center; gap: 8px; height: 42px; padding: 0 20px; border-radius: 999px; color: var(--fg-2); font-size: 14px;">Mobile<span class="mono" style="font-size: 11px; opacity: 0.72;">02</span></span>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+        <span class="mono" style="padding: 6px 11px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-size: 10px; letter-spacing: 0.12em;">LIVE</span>
+        <span class="mono" style="padding: 6px 11px; border: 1px solid var(--line-2); border-radius: 999px; color: var(--fg-3); font-size: 10px; letter-spacing: 0.12em;">PRIVATE</span>
+        <span class="mono" style="padding: 6px 11px; border: 1px solid var(--line-2); border-radius: 999px; color: var(--fg-3); font-size: 10px; letter-spacing: 0.1em;">KOTLIN</span>
+        <span class="mono" style="padding: 6px 11px; border: 1px solid var(--line-2); border-radius: 999px; color: var(--fg-3); font-size: 10px; letter-spacing: 0.1em;">FLUTTER</span>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 12px; padding: 20px; border: 1px solid var(--line); border-radius: 6px;">
+        <span class="mono" style="font-size: 10px; letter-spacing: 0.14em; color: var(--fg-3);">SKILL LEVEL — REPLACES THE CHECKMARK ICONS</span>
+        <span style="display: flex; align-items: center; justify-content: space-between; gap: 16px;"><span style="font-size: 15px;">Experienced</span><span style="display: flex; gap: 4px;"><span style="width: 22px; height: 4px; border-radius: 999px; background: var(--accent);"></span><span style="width: 22px; height: 4px; border-radius: 999px; background: var(--accent);"></span><span style="width: 22px; height: 4px; border-radius: 999px; background: var(--accent);"></span></span></span>
+        <span style="display: flex; align-items: center; justify-content: space-between; gap: 16px;"><span style="font-size: 15px;">Intermediate</span><span style="display: flex; gap: 4px;"><span style="width: 22px; height: 4px; border-radius: 999px; background: var(--accent);"></span><span style="width: 22px; height: 4px; border-radius: 999px; background: var(--accent);"></span><span style="width: 22px; height: 4px; border-radius: 999px; background: var(--line-2);"></span></span></span>
+        <span style="display: flex; align-items: center; justify-content: space-between; gap: 16px;"><span style="font-size: 15px;">Basic</span><span style="display: flex; gap: 4px;"><span style="width: 22px; height: 4px; border-radius: 999px; background: var(--accent);"></span><span style="width: 22px; height: 4px; border-radius: 999px; background: var(--line-2);"></span><span style="width: 22px; height: 4px; border-radius: 999px; background: var(--line-2);"></span></span></span>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <span style="display: flex; align-items: center; width: 62px; height: 38px; padding: 4px; border: 1px solid var(--line-2); border-radius: 999px; background: var(--bg-2); justify-content: flex-start; box-sizing: border-box;">
+          <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 999px; background: var(--accent); color: var(--accent-ink);">
+            <svg viewBox="0 0 24 24" style="width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path></svg>
+          </span>
+        </span>
+        <span style="display: flex; align-items: center; gap: 8px; height: 38px; padding: 0 14px; border: 1px solid var(--line-2); border-radius: 999px; font-size: 13px; color: var(--fg-2);">
+          <svg viewBox="0 0 24 24" style="width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round;"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"></path></svg>
+          <span class="mono" style="font-size: 12px;">EN</span>
+        </span>
+        <span class="mono" style="font-size: 10px; letter-spacing: 0.1em; color: var(--fg-3);">EXISTING CONTROLS, RESTYLED</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; padding-top: 32px; border-top: 1px solid var(--line);">
+    <div style="display: flex; flex-direction: column; gap: 10px; padding: 24px; background: var(--bg-2); border: 1px solid var(--line); border-radius: 6px;">
+      <span class="mono" style="font-size: 10px; letter-spacing: 0.14em; color: var(--accent);">RADII</span>
+      <span style="font-size: 15px; line-height: 1.6; color: var(--fg-2);">4px on media and panels, 6px on cards, 999px on every control. Nothing in between.</span>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 10px; padding: 24px; background: var(--bg-2); border: 1px solid var(--line); border-radius: 6px;">
+      <span class="mono" style="font-size: 10px; letter-spacing: 0.14em; color: var(--accent);">SPACING</span>
+      <span style="font-size: 15px; line-height: 1.6; color: var(--fg-2);">96px page gutter, 104px between sections, 24px between cards, 8px inside a control.</span>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 10px; padding: 24px; background: var(--bg-2); border: 1px solid var(--line); border-radius: 6px;">
+      <span class="mono" style="font-size: 10px; letter-spacing: 0.14em; color: var(--accent);">DEPTH</span>
+      <span style="font-size: 15px; line-height: 1.6; color: var(--fg-2);">Hairline borders instead of shadows. Surfaces separate by tone, never by blur.</span>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script data-dc-script data-props='{"$preview":{"width":1240,"height":1420}}'>
+class Component extends DCLogic {}
+</script>
+</body>
+</html>

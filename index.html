@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#0b0f0d" />
     <meta name="author" content="Yilberth Andres" />
     <meta
       name="description"
-      content="Backend developer portfolio featuring experience with PHP, Python, JavaScript, Django, Laravel, REST APIs, SQL, and NoSQL."
+      content="Backend developer portfolio featuring experience with PHP, Python, JavaScript, Django, Laravel, REST APIs, SQL, and NoSQL, plus two personal Android apps."
       data-i18n-content="meta.description"
     />
     <meta name="robots" content="index, follow" />
@@ -18,7 +18,7 @@
     <meta property="og:title" content="Yilberth Andres | Backend Developer" data-i18n-content="meta.title" />
     <meta
       property="og:description"
-      content="Backend developer portfolio featuring experience with PHP, Python, JavaScript, Django, Laravel, REST APIs, SQL, and NoSQL."
+      content="Backend developer portfolio featuring experience with PHP, Python, JavaScript, Django, Laravel, REST APIs, SQL, and NoSQL, plus two personal Android apps."
       data-i18n-content="meta.description"
     />
     <meta property="og:image" content="https://yilberthandres.github.io/assets/images/profile/profile-social.jpg" />
@@ -26,7 +26,7 @@
     <meta name="twitter:title" content="Yilberth Andres | Backend Developer" data-i18n-content="meta.title" />
     <meta
       name="twitter:description"
-      content="Backend developer portfolio featuring experience with PHP, Python, JavaScript, Django, Laravel, REST APIs, SQL, and NoSQL."
+      content="Backend developer portfolio featuring experience with PHP, Python, JavaScript, Django, Laravel, REST APIs, SQL, and NoSQL, plus two personal Android apps."
       data-i18n-content="meta.description"
     />
     <meta name="twitter:image" content="https://yilberthandres.github.io/assets/images/profile/profile-social.jpg" />
@@ -39,29 +39,42 @@
         try {
           savedTheme = localStorage.getItem("theme");
         } catch {
-          // Use the system preference when storage is unavailable.
+          // Use the default theme when storage is unavailable.
         }
 
         const initialTheme = ["light", "dark"].includes(savedTheme)
           ? savedTheme
-          : "light";
+          : "dark";
 
         document.documentElement.dataset.theme = initialTheme;
       })();
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap"
+    />
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/responsive.css" />
   </head>
   <body>
-    <nav id="desktop-nav">
-      <div class="logo">Yilberth Andres</div>
-      <div class="desktop-nav-actions">
-        <ul class="nav-links">
-          <li><a href="#about" data-i18n="nav.about">About</a></li>
-          <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
-          <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
-          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
-        </ul>
+    <a class="skip-link" href="#profile" data-i18n="accessibility.skipToContent">Skip to content</a>
+
+    <nav id="desktop-nav" class="site-nav">
+      <a class="logo" href="#profile">
+        <span class="logo__mark" aria-hidden="true">YA</span>
+        <span class="logo__name">Yilberth Andrés</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
+        <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+        <li><a href="#education" data-i18n="nav.education">Education</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="#apps" data-i18n="nav.apps">Personal apps</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
         <label class="language-selector">
           <svg class="language-selector__icon" viewBox="0 0 24 24" aria-hidden="true">
             <circle cx="12" cy="12" r="9"></circle>
@@ -79,24 +92,27 @@
             <option value="zh">中文</option>
           </select>
         </label>
-        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode">
-          <span class="theme-toggle__track" aria-hidden="true">
-            <span class="theme-toggle__thumb">
-              <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="4"></circle>
-                <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path>
-              </svg>
-              <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
-              </svg>
-            </span>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode">
+          <span class="theme-toggle__thumb" aria-hidden="true">
+            <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path>
+            </svg>
+            <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+            </svg>
           </span>
         </button>
+        <a class="btn btn--solid btn--sm" href="#contact" data-i18n="nav.cta">Get in touch</a>
       </div>
     </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Yilberth Andres</div>
-      <div class="mobile-nav-actions">
+
+    <nav id="hamburger-nav" class="site-nav">
+      <a class="logo" href="#profile">
+        <span class="logo__mark" aria-hidden="true">YA</span>
+        <span class="logo__name">Yilberth Andrés</span>
+      </a>
+      <div class="nav-actions">
         <label class="language-selector language-selector--compact">
           <svg class="language-selector__icon" viewBox="0 0 24 24" aria-hidden="true">
             <circle cx="12" cy="12" r="9"></circle>
@@ -114,17 +130,15 @@
             <option value="zh">中文</option>
           </select>
         </label>
-        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode">
-          <span class="theme-toggle__track" aria-hidden="true">
-            <span class="theme-toggle__thumb">
-              <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="4"></circle>
-                <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path>
-              </svg>
-              <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
-              </svg>
-            </span>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode">
+          <span class="theme-toggle__thumb" aria-hidden="true">
+            <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path>
+            </svg>
+            <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+            </svg>
           </span>
         </button>
         <div class="hamburger-menu">
@@ -143,61 +157,723 @@
           <ul class="menu-links" id="mobile-menu">
             <li><a href="#about" data-i18n="nav.about">About</a></li>
             <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
-            <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+            <li><a href="#education" data-i18n="nav.education">Education</a></li>
+            <li><a href="#education" data-i18n="nav.education">Education</a></li>
+          <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+            <li><a href="#apps" data-i18n="nav.apps">Personal apps</a></li>
             <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
           </ul>
         </div>
       </div>
     </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <button
-          class="profile-image-button"
-          type="button"
-          data-profile-zoom
-          aria-haspopup="dialog"
-          aria-controls="profile-lightbox"
-          data-i18n-aria-label="accessibility.zoomProfile"
-          aria-label="Enlarge profile photo"
-        >
-          <img
-            src="assets/images/profile/profile-photo.webp"
-            width="445"
-            height="451"
-            fetchpriority="high"
-            alt="Yilberth Andres profile picture"
-            data-i18n-alt="accessibility.profilePhoto"
-          />
-        </button>
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1" data-i18n="profile.greeting">Hello, I'm</p>
-        <h1 class="title">Yilberth Andres</h1>
-        <p class="section__text__p2" data-i18n="profile.role">Backend Developer</p>
-        <div class="btn-container">
-          <a
-            class="btn btn-color-2"
-            href="assets/documents/yilberth-andres-cv.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span data-i18n="profile.downloadCv">Download CV</span>
-          </a>
-          <a class="btn btn-color-1" href="#contact">
-            <span data-i18n="profile.contactInfo">Contact Info</span>
-          </a>
+
+    <main>
+      <section id="profile" class="hero">
+        <div class="hero__text">
+          <p class="eyebrow">
+            <span class="eyebrow__dot" aria-hidden="true"></span>
+            <span data-i18n="profile.eyebrow">Backend developer — Bogotá, Colombia</span>
+          </p>
+          <h1 class="hero__title">
+            <span data-i18n="profile.headlineStart">Backends, APIs and mobile apps that</span>
+            <em class="accent-serif" data-i18n="profile.headlineEm">hold up</em>
+            <span data-i18n="profile.headlineEnd">in production.</span>
+          </h1>
+          <p class="hero__summary" data-i18n="profile.summary">
+            Systems engineer with 4+ years building web platforms in Laravel, PHP and Django — and two Android apps of my own, from the database up to the store listing.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--solid" href="#projects">
+              <span data-i18n="profile.viewProjects">View projects</span>
+              <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+            </a>
+            <a
+              class="btn btn--ghost"
+              href="assets/documents/yilberth-andres-cv.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"></path></svg>
+              <span data-i18n="profile.downloadCv">Download CV</span>
+            </a>
+            <div class="social-links">
+              <a
+                class="icon-button"
+                href="https://www.linkedin.com/in/yilberth-galarza-25a863248/"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n-aria-label="accessibility.linkedin"
+                aria-label="My LinkedIn profile"
+              >
+                <svg viewBox="0 0 24 24" class="icon-button__glyph icon-button__glyph--fill" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.76-1.95C21.4 8.75 22 11.1 22 14.1V21h-4v-6.1c0-1.45-.03-3.3-2.03-3.3-2.03 0-2.34 1.57-2.34 3.2V21h-4V9Z"></path></svg>
+              </a>
+              <a
+                class="icon-button"
+                href="https://github.com/YilberthAndres"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n-aria-label="accessibility.github"
+                aria-label="My GitHub profile"
+              >
+                <svg viewBox="0 0 24 24" class="icon-button__glyph icon-button__glyph--fill" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85l-.01 2.75c0 .26.18.58.69.48A10 10 0 0 0 12 2Z"></path></svg>
+              </a>
+            </div>
+          </div>
         </div>
-        <div id="socials-container">
-          <a href="https://www.linkedin.com/in/yilberth-galarza-25a863248/" target="_blank" rel="noopener noreferrer">
-              <img src="./assets/icons/linkedin.png" alt="My LinkedIn profile" data-i18n-alt="accessibility.linkedin" class="icon">
-          </a>
-          <a href="https://github.com/YilberthAndres" target="_blank" rel="noopener noreferrer">
-              <img src="./assets/icons/github.png" alt="My Github profile" data-i18n-alt="accessibility.github" class="icon">
-          </a>
+
+        <div class="hero__aside">
+          <button
+            class="hero__photo"
+            type="button"
+            data-profile-zoom
+            aria-haspopup="dialog"
+            aria-controls="profile-lightbox"
+            data-i18n-aria-label="accessibility.zoomProfile"
+            aria-label="Enlarge profile photo"
+          >
+            <img
+              src="assets/images/profile/profile-photo.webp"
+              width="445"
+              height="451"
+              fetchpriority="high"
+              alt="Yilberth Andres profile picture"
+              data-i18n-alt="accessibility.profilePhoto"
+            />
+            <span class="hero__photo-caption mono" data-i18n="profile.photoCaption">Systems engineer</span>
+          </button>
+          <div class="hero__stats">
+            <div class="stat">
+              <span class="stat__value">4+</span>
+              <span class="stat__label mono" data-i18n="profile.yearsLabel">Years shipping</span>
+            </div>
+            <div class="stat">
+              <span class="stat__value">5</span>
+              <span class="stat__label mono" data-i18n="profile.projectsLabel">Projects on this page</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="stack-strip mono" aria-hidden="true">
+        <span class="stack-strip__item stack-strip__item--lead">PHP</span>
+        <span class="stack-strip__item">LARAVEL</span>
+        <span class="stack-strip__item">PYTHON</span>
+        <span class="stack-strip__item">DJANGO</span>
+        <span class="stack-strip__item">JAVASCRIPT</span>
+        <span class="stack-strip__item">REST APIs</span>
+        <span class="stack-strip__item">SQL / NoSQL</span>
+        <span class="stack-strip__item">KOTLIN</span>
+        <span class="stack-strip__item">JETPACK COMPOSE</span>
+        <span class="stack-strip__item">FLUTTER</span>
+        <span class="stack-strip__item">GIT</span>
       </div>
-      
-      </div>
-    </section>
+
+      <section id="about" class="section">
+        <header class="section__head">
+          <span class="section__index mono">01</span>
+          <span class="section__label mono" data-i18n="about.eyebrow">About</span>
+        </header>
+        <div class="about">
+          <img
+            class="about__photo"
+            src="./assets/images/profile/profile-about.webp"
+            width="1000"
+            height="1000"
+            loading="lazy"
+            alt="Profile picture"
+            data-i18n-alt="accessibility.aboutPhoto"
+          />
+          <div class="about__body">
+            <h2 class="statement">
+              <span data-i18n="about.statementStart">I like the problems that live</span>
+              <em class="accent-serif" data-i18n="about.statementEm">behind the screen</em>
+              <span data-i18n="about.statementEnd">— data models, APIs, and the glue that keeps them honest.</span>
+            </h2>
+            <p class="about__text" data-i18n="about.description">
+              I'm a systems engineer specialised in programming, with primary experience in PHP, Python and JavaScript. I build web applications with frameworks like Laravel and Django, design REST APIs, and manage both SQL and NoSQL databases. Lately I've been taking that same backend thinking into mobile: two Android apps I designed, built and published on my own.
+            </p>
+            <div class="fact-grid">
+              <div class="fact">
+                <svg class="fact__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3 7.5 12 12l9-4.5L12 3Z"></path><path d="m3 12 9 4.5L21 12M3 16.5 12 21l9-4.5"></path></svg>
+                <span class="fact__value" data-i18n="about.years">4+ years</span>
+                <span class="fact__label mono" data-i18n="about.experience">Experience</span>
+              </div>
+              <a class="fact fact--link" href="#education">
+                <svg class="fact__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8.5 12 4l9 4.5-9 4.5-9-4.5Z"></path><path d="M7 11v5c0 1.5 2.2 2.6 5 2.6s5-1.1 5-2.6v-5"></path><path d="M21 8.5V14"></path></svg>
+                <span class="fact__value" data-i18n="about.degree">Engineer + Specialist</span>
+                <span class="fact__label mono" data-i18n="about.education">Education</span>
+                <span class="fact__more mono">
+                  <span data-i18n="about.seeEducation">See education</span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+                </span>
+              </a>
+              <div class="fact">
+                <svg class="fact__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"></path></svg>
+                <span class="fact__value" data-i18n="about.languagesValue">Spanish · English</span>
+                <span class="fact__label mono" data-i18n="about.languagesLabel">Languages</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section">
+        <header class="section__head">
+          <span class="section__index mono">02</span>
+          <span class="section__label mono" data-i18n="experience.eyebrow">Experience</span>
+        </header>
+
+        <article class="career">
+          <div class="career__side">
+            <span class="career__period mono" data-experience-period>September 2022 — June 2026</span>
+            <h3 class="career__role" data-i18n="experience.role">Full Stack Developer</h3>
+            <p class="career__company" data-i18n="experience.company">Newo SAS — Bogotá, Colombia</p>
+            <span class="tag mono" data-i18n="experience.remote">Remote</span>
+          </div>
+          <div class="career__body">
+            <p class="career__summary" data-i18n="experience.summary">
+              Backend and frontend development with Laravel and PHP, SQL database management, bug fixing and feature development, REST API creation, and day-to-day remote collaboration with the product team.
+            </p>
+            <ul class="bullets">
+              <li data-i18n="experience.bullet1">REST API design and integration</li>
+              <li data-i18n="experience.bullet2">Relational database modelling</li>
+              <li data-i18n="experience.bullet3">Feature development end to end</li>
+              <li data-i18n="experience.bullet4">Debugging and production support</li>
+            </ul>
+          </div>
+        </article>
+
+        <div class="skill-grid">
+          <div class="skill-card">
+            <h4 class="skill-card__title mono" data-i18n="experience.languages">Languages</h4>
+            <ul class="skill-list">
+              <li class="skill">
+                <span class="skill__name">PHP</span>
+                <span class="skill__level skill__level--3" role="img" data-i18n-aria-label="experience.experienced" aria-label="Experienced"><i></i><i></i><i></i></span>
+              </li>
+              <li class="skill">
+                <span class="skill__name">JavaScript</span>
+                <span class="skill__level skill__level--3" role="img" data-i18n-aria-label="experience.experienced" aria-label="Experienced"><i></i><i></i><i></i></span>
+              </li>
+              <li class="skill">
+                <span class="skill__name">Python</span>
+                <span class="skill__level skill__level--2" role="img" data-i18n-aria-label="experience.intermediate" aria-label="Intermediate"><i></i><i></i><i></i></span>
+              </li>
+              <li class="skill">
+                <span class="skill__name">Kotlin</span>
+                <span class="skill__level skill__level--2" role="img" data-i18n-aria-label="experience.intermediate" aria-label="Intermediate"><i></i><i></i><i></i></span>
+              </li>
+              <li class="skill">
+                <span class="skill__name">Dart</span>
+                <span class="skill__level skill__level--2" role="img" data-i18n-aria-label="experience.intermediate" aria-label="Intermediate"><i></i><i></i><i></i></span>
+              </li>
+              <li class="skill">
+                <span class="skill__name">Java · TypeScript · C#</span>
+                <span class="skill__level skill__level--1" role="img" data-i18n-aria-label="experience.basic" aria-label="Basic"><i></i><i></i><i></i></span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="skill-card">
+            <h4 class="skill-card__title mono" data-i18n="experience.frameworks">Frameworks</h4>
+            <ul class="skill-list">
+              <li class="skill">
+                <span class="skill__name">Laravel</span>
+                <span class="skill__level skill__level--3" role="img" data-i18n-aria-label="experience.experienced" aria-label="Experienced"><i></i><i></i><i></i></span>
+              </li>
+              <li class="skill">
+                <span class="skill__name">Django</span>
+                <span class="skill__level skill__level--2" role="img" data-i18n-aria-label="experience.intermediate" aria-label="Intermediate"><i></i><i></i><i></i></span>
+              </li>
+              <li class="skill">
+                <span class="skill__name">Flutter</span>
+                <span class="skill__level skill__level--2" role="img" data-i18n-aria-label="experience.intermediate" aria-label="Intermediate"><i></i><i></i><i></i></span>
+              </li>
+              <li class="skill">
+                <span class="skill__name">Jetpack Compose</span>
+                <span class="skill__level skill__level--2" role="img" data-i18n-aria-label="experience.intermediate" aria-label="Intermediate"><i></i><i></i><i></i></span>
+              </li>
+              <li class="skill">
+                <span class="skill__name">FastAPI · Yii</span>
+                <span class="skill__level skill__level--1" role="img" data-i18n-aria-label="experience.basic" aria-label="Basic"><i></i><i></i><i></i></span>
+              </li>
+              <li class="skill">
+                <span class="skill__name">React · Angular</span>
+                <span class="skill__level skill__level--1" role="img" data-i18n-aria-label="experience.basic" aria-label="Basic"><i></i><i></i><i></i></span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="skill-card">
+            <h4 class="skill-card__title mono" data-i18n="experience.platform">Platform &amp; data</h4>
+            <ul class="skill-list">
+              <li class="skill">
+                <span class="skill__name">REST APIs</span>
+                <span class="skill__level skill__level--3" role="img" data-i18n-aria-label="experience.experienced" aria-label="Experienced"><i></i><i></i><i></i></span>
+              </li>
+              <li class="skill">
+                <span class="skill__name" data-i18n="experience.sql">SQL databases</span>
+                <span class="skill__level skill__level--3" role="img" data-i18n-aria-label="experience.experienced" aria-label="Experienced"><i></i><i></i><i></i></span>
+              </li>
+              <li class="skill">
+                <span class="skill__name">NoSQL</span>
+                <span class="skill__level skill__level--2" role="img" data-i18n-aria-label="experience.intermediate" aria-label="Intermediate"><i></i><i></i><i></i></span>
+              </li>
+              <li class="skill">
+                <span class="skill__name">WebSockets</span>
+                <span class="skill__level skill__level--2" role="img" data-i18n-aria-label="experience.intermediate" aria-label="Intermediate"><i></i><i></i><i></i></span>
+              </li>
+              <li class="skill">
+                <span class="skill__name">Firebase</span>
+                <span class="skill__level skill__level--2" role="img" data-i18n-aria-label="experience.intermediate" aria-label="Intermediate"><i></i><i></i><i></i></span>
+              </li>
+              <li class="skill">
+                <span class="skill__name">Git</span>
+                <span class="skill__level skill__level--3" role="img" data-i18n-aria-label="experience.experienced" aria-label="Experienced"><i></i><i></i><i></i></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="section">
+        <header class="section__head">
+          <span class="section__index mono">03</span>
+          <span class="section__label mono" data-i18n="education.eyebrow">Education</span>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline__item">
+            <div class="timeline__side">
+              <span class="timeline__period mono" data-i18n="education.period1">June 2024 — June 2025</span>
+              <span class="badge badge--live mono" data-i18n="education.postgraduate">Postgraduate</span>
+            </div>
+            <div class="timeline__body">
+              <svg class="timeline__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 8.5 12 4l9 4.5-9 4.5-9-4.5Z"></path>
+                <path d="M7 11v5c0 1.5 2.2 2.6 5 2.6s5-1.1 5-2.6v-5"></path>
+                <path d="M21 8.5V14"></path>
+              </svg>
+              <div class="timeline__text">
+                <h3 class="timeline__title" data-i18n="education.specialisation">
+                  Specialisation in Digital Transformation
+                </h3>
+                <p class="timeline__place">Corporación Unificada Nacional de Educación Superior — CUN</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="timeline__item">
+            <div class="timeline__side">
+              <span class="timeline__period mono" data-i18n="education.period2">February 2017 — June 2022</span>
+              <span class="badge mono" data-i18n="education.degreeBadge">Professional degree</span>
+            </div>
+            <div class="timeline__body">
+              <svg class="timeline__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 8.5 12 4l9 4.5-9 4.5-9-4.5Z"></path>
+                <path d="M7 11v5c0 1.5 2.2 2.6 5 2.6s5-1.1 5-2.6v-5"></path>
+              </svg>
+              <div class="timeline__text">
+                <h3 class="timeline__title" data-i18n="education.engineering">Systems Engineering</h3>
+                <p class="timeline__place">Universidad de La Guajira</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section id="projects" class="section">
+        <header class="section__head">
+          <span class="section__index mono">04</span>
+          <span class="section__label mono" data-i18n="projects.eyebrow">Selected work</span>
+        </header>
+        <h2 class="statement statement--compact" data-i18n="projects.title">
+          Platforms I helped build at Newo SAS.
+        </h2>
+
+        <div class="project-grid">
+          <article class="project">
+            <div class="project__media">
+              <img
+                src="./assets/images/projects/tucolegio.webp"
+                width="512"
+                height="512"
+                loading="lazy"
+                alt="Tucolegio.co"
+              />
+            </div>
+            <div class="project__body">
+              <div class="project__head">
+                <h3 class="project__title">Tucolegio.co</h3>
+                <span class="badge badge--live mono" data-i18n="projects.live">Live</span>
+              </div>
+              <p class="project__text" data-i18n="projects.tucolegioDescription">
+                Educational management platform for schools and their communities.
+              </p>
+              <ul class="chips mono">
+                <li>LARAVEL</li>
+                <li>PHP</li>
+                <li>SQL</li>
+              </ul>
+              <a class="link-out" href="https://www.tucolegio.co/" target="_blank" rel="noopener noreferrer">
+                tucolegio.co
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"></path></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project__media">
+              <img
+                src="./assets/images/projects/human-data.webp"
+                width="1075"
+                height="882"
+                loading="lazy"
+                alt="Human Data"
+              />
+            </div>
+            <div class="project__body">
+              <div class="project__head">
+                <h3 class="project__title">Human Data</h3>
+                <span class="badge badge--live mono" data-i18n="projects.live">Live</span>
+              </div>
+              <p class="project__text" data-i18n="projects.humanDataDescription">
+                Candidate assessment platform with tools for talent management teams.
+              </p>
+              <ul class="chips mono">
+                <li>LARAVEL</li>
+                <li>REST API</li>
+                <li>SQL</li>
+              </ul>
+              <a class="link-out" href="https://humandata.com.co/" target="_blank" rel="noopener noreferrer">
+                humandata.com.co
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"></path></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project__media">
+              <img
+                src="./assets/images/projects/d-health.webp"
+                width="877"
+                height="520"
+                loading="lazy"
+                alt="D-HEALTH"
+              />
+            </div>
+            <div class="project__body">
+              <div class="project__head">
+                <h3 class="project__title">D-HEALTH</h3>
+                <span class="badge mono" data-i18n="projects.privateBadge">Private</span>
+              </div>
+              <p class="project__text" data-i18n="projects.dHealthDescription">
+                Business solution for clinical records, scheduling, appointments, and medical reports.
+              </p>
+              <ul class="chips mono">
+                <li>PHP</li>
+                <li>SQL</li>
+                <li>REPORTS</li>
+              </ul>
+              <span class="link-out link-out--muted">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>
+                <span data-i18n="projects.private">Private project</span>
+              </span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="apps" class="section">
+        <header class="section__head">
+          <span class="section__index mono">05</span>
+          <span class="section__label mono" data-i18n="apps.eyebrow">Personal projects</span>
+        </header>
+        <h2 class="statement statement--compact">
+          <span data-i18n="apps.titleStart">Two mobile apps I designed, built and</span>
+          <em class="accent-serif" data-i18n="apps.titleEm">shipped on my own.</em>
+        </h2>
+        <p class="section__intro" data-i18n="apps.intro">
+          Side projects with no team behind them: the product decisions, the database, the API and the interface are all mine.
+        </p>
+
+        <article class="app-card">
+          <div class="app-card__body">
+            <header class="app-card__head">
+              <img
+                class="app-card__icon"
+                src="./assets/images/apps/vestigra-icon.png"
+                width="512"
+                height="512"
+                loading="lazy"
+                alt="Vestigra app icon"
+                data-i18n-alt="accessibility.vestigraIcon"
+              />
+              <div class="app-card__id">
+                <h3 class="app-card__name">Vestigra</h3>
+                <div class="app-card__tags">
+                  <span class="badge badge--live mono" data-i18n="apps.personalBadge">Personal project</span>
+                  <span class="badge mono">ANDROID</span>
+                </div>
+              </div>
+            </header>
+            <p class="app-card__tagline">
+              <span data-i18n="apps.vestigraTaglineStart">Find any name, number or code</span>
+              <em class="accent-serif" data-i18n="apps.vestigraTaglineEm">inside your own photos</em>
+              <span data-i18n="apps.vestigraTaglineEnd">— without a single image leaving the phone.</span>
+            </p>
+            <ul class="bullets bullets--two">
+              <li data-i18n="apps.vestigraBullet1">On-device text recognition with ML Kit — no uploads, no cloud OCR.</li>
+              <li data-i18n="apps.vestigraBullet2">Private full-text index in Room + FTS, with prefix and digit matching.</li>
+              <li data-i18n="apps.vestigraBullet3">Matches highlighted on the thumbnail and inside the opened photo.</li>
+              <li data-i18n="apps.vestigraBullet4">Consent-gated indexing that runs only while the app is open.</li>
+            </ul>
+            <ul class="chips mono">
+              <li>KOTLIN</li>
+              <li>JETPACK COMPOSE</li>
+              <li>ML KIT</li>
+              <li>ROOM / FTS</li>
+              <li>MATERIAL 3</li>
+            </ul>
+            <div class="app-card__actions">
+              <a class="btn btn--solid btn--sm" href="https://www.vestigra.site" target="_blank" rel="noopener noreferrer">
+                vestigra.site
+                <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"></path></svg>
+              </a>
+              <span class="tag mono" data-i18n="apps.vestigraNote">Offline-first · no photo uploads</span>
+            </div>
+          </div>
+
+          <div class="app-card__preview">
+            <div class="phone phone--vestigra" aria-hidden="true">
+              <div class="phone__screen">
+                <div class="vst__top">
+                  <div class="vst__bar">
+                    <span class="vst__app">Vestigra</span>
+                    <svg viewBox="0 0 24 24" class="vst__dots"><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
+                  </div>
+                  <div class="vst__search">
+                    <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg>
+                    <span>recibo 4820</span>
+                  </div>
+                  <div class="vst__filters">
+                    <span class="vst__filter vst__filter--on">All</span>
+                    <span class="vst__filter">Screenshots</span>
+                    <span class="vst__filter">Camera</span>
+                  </div>
+                </div>
+                <div class="vst__grid">
+                  <span class="vst__thumb vst__thumb--a">
+                    <i class="vst__hit" style="left: 14px; top: 32px; width: 60px; height: 13px"></i>
+                    <i class="vst__hit" style="left: 14px; top: 52px; width: 40px; height: 11px"></i>
+                    <i class="vst__more">+3</i>
+                  </span>
+                  <span class="vst__thumb vst__thumb--b">
+                    <i class="vst__hit" style="left: 16px; top: 60px; width: 56px; height: 12px"></i>
+                  </span>
+                  <span class="vst__thumb vst__thumb--c"></span>
+                  <span class="vst__thumb vst__thumb--d">
+                    <i class="vst__hit" style="left: 18px; top: 38px; width: 46px; height: 12px"></i>
+                  </span>
+                </div>
+                <div class="vst__progress">
+                  <div class="vst__progress-row">
+                    <span>Indexing photos</span>
+                    <span class="vst__count">1 204 / 1 860</span>
+                  </div>
+                  <span class="vst__track"><i style="width: 65%"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="app-card app-card--reverse">
+          <div class="app-card__body">
+            <header class="app-card__head">
+              <span class="app-card__icon app-card__icon--framed">
+                <img
+                  src="./assets/images/apps/riopool-icon.png"
+                  width="320"
+                  height="320"
+                  loading="lazy"
+                  alt="RioPool app icon"
+                  data-i18n-alt="accessibility.riopoolIcon"
+                />
+              </span>
+              <div class="app-card__id">
+                <h3 class="app-card__name">RioPool</h3>
+                <div class="app-card__tags">
+                  <span class="badge badge--cyan mono" data-i18n="apps.personalBadge">Personal project</span>
+                  <span class="badge mono">ANDROID · iOS · WEB</span>
+                </div>
+              </div>
+            </header>
+            <p class="app-card__tagline">
+              <span data-i18n="apps.riopoolTaglineStart">Water quality monitoring for swimming pools: sensors report in, the dashboard</span>
+              <em class="accent-serif accent-serif--cyan" data-i18n="apps.riopoolTaglineEm">reacts in real time.</em>
+            </p>
+            <ul class="bullets bullets--two bullets--cyan">
+              <li data-i18n="apps.riopoolBullet1">One Flutter codebase across Android, iOS, Web and Windows.</li>
+              <li data-i18n="apps.riopoolBullet2">REST for history, WebSockets for live readings, with resilient resync.</li>
+              <li data-i18n="apps.riopoolBullet3">Out-of-range alerts and push notifications per prototype.</li>
+              <li data-i18n="apps.riopoolBullet4">Status colours measured for contrast — never colour alone.</li>
+            </ul>
+            <ul class="chips mono">
+              <li>FLUTTER</li>
+              <li>DART</li>
+              <li>REST API</li>
+              <li>WEBSOCKETS</li>
+              <li>FIREBASE MESSAGING</li>
+            </ul>
+            <div class="app-card__actions">
+              <a class="btn btn--invert btn--sm" href="https://pool.riogym.site" target="_blank" rel="noopener noreferrer">
+                pool.riogym.site
+                <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"></path></svg>
+              </a>
+              <span class="tag mono">v1.0.0</span>
+            </div>
+          </div>
+
+          <div class="app-card__preview">
+            <div class="phone phone--riopool" aria-hidden="true">
+              <div class="phone__screen">
+                <div class="rio__header">
+                  <div class="rio__bar">
+                    <span class="rio__app">RioPool</span>
+                    <span class="rio__live"><i></i>LIVE</span>
+                  </div>
+                  <span class="rio__pool">Pool 2 — Prototype A</span>
+                  <span class="rio__updated">Updated 12 seconds ago</span>
+                </div>
+                <div class="rio__metrics">
+                  <div class="rio__metric">
+                    <span class="rio__metric-label">WATER TEMP</span>
+                    <span class="rio__metric-value rio__metric-value--water">27.4 °C</span>
+                  </div>
+                  <div class="rio__metric">
+                    <span class="rio__metric-label">pH</span>
+                    <span class="rio__metric-value rio__metric-value--ph">7.2</span>
+                  </div>
+                  <div class="rio__metric">
+                    <span class="rio__metric-label">ORP</span>
+                    <span class="rio__metric-value rio__metric-value--orp">712 mV</span>
+                  </div>
+                  <div class="rio__metric">
+                    <span class="rio__metric-label">AMBIENT</span>
+                    <span class="rio__metric-value rio__metric-value--amb">24.1 °C</span>
+                  </div>
+                </div>
+                <div class="rio__chart">
+                  <div class="rio__chart-head">
+                    <span>Last 12 hours</span>
+                    <span class="rio__chart-tag">pH</span>
+                  </div>
+                  <svg viewBox="0 0 200 60" preserveAspectRatio="none">
+                    <path
+                      d="M0 42 L20 38 L40 44 L60 30 L80 34 L100 22 L120 27 L140 18 L160 24 L180 16 L200 20 L200 60 L0 60 Z"
+                      fill="rgba(0,168,168,0.10)"
+                    ></path>
+                    <path
+                      d="M0 42 L20 38 L40 44 L60 30 L80 34 L100 22 L120 27 L140 18 L160 24 L180 16 L200 20"
+                      fill="none"
+                      stroke="#00a8a8"
+                      stroke-width="2.4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="rio__alert">
+                  <svg viewBox="0 0 24 24"><path d="M12 3 2.5 20h19L12 3Z"></path><path d="M12 10v4M12 17v.5"></path></svg>
+                  <span class="rio__alert-text">
+                    <span>Chlorine below range</span>
+                    <span class="rio__alert-meta">14:02 · PROTOTYPE A</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section id="contact" class="section">
+        <header class="section__head">
+          <span class="section__index mono">06</span>
+          <span class="section__label mono" data-i18n="contact.eyebrow">Contact</span>
+        </header>
+        <div class="contact">
+          <div class="contact__pitch">
+            <h2 class="statement statement--compact">
+              <span data-i18n="contact.headlineStart">Got a backend that needs building — or</span>
+              <em class="accent-serif" data-i18n="contact.headlineEm">rescuing?</em>
+            </h2>
+            <p class="contact__text" data-i18n="contact.summary">
+              Tell me what you are building and I'll tell you honestly whether I'm the right person for it. I read every message.
+            </p>
+            <div class="contact__actions">
+              <a class="btn btn--solid" href="mailto:yilberthgalarza444@gmail.com">
+                <span data-i18n="contact.emailCta">Send me an email</span>
+                <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+              </a>
+              <a
+                class="btn btn--ghost"
+                href="assets/documents/yilberth-andres-cv.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n="profile.downloadCv"
+              >
+                Download CV
+              </a>
+            </div>
+          </div>
+
+          <ul class="contact__list">
+            <li>
+              <a href="mailto:yilberthgalarza444@gmail.com">
+                <svg class="contact__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3.5 7 8.5 6 8.5-6"></path></svg>
+                <span class="contact__pair">
+                  <span class="contact__label mono" data-i18n="contact.emailLabel">Email</span>
+                  <span class="contact__value">yilberthgalarza444@gmail.com</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/573042115334" target="_blank" rel="noopener noreferrer">
+                <svg class="contact__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.6a8.4 8.4 0 0 1-12.4 7.4L3.5 20.5l1.6-4.5A8.4 8.4 0 1 1 20.5 11.6Z"></path><path d="M8.8 8.6c.3-.6.6-.6.9-.6h.7c.2 0 .5 0 .7.6l.7 1.7c.1.3 0 .5-.1.7l-.4.5c-.1.2-.3.3-.1.6.4.7 1.4 1.8 2.4 2.3.3.2.5.1.6 0l.5-.6c.2-.2.4-.2.6-.1l1.6.8c.3.1.5.3.5.5 0 .6-.4 1.6-1.6 1.7-1 .1-2.5-.3-4.3-1.8-1.7-1.5-2.7-3.3-2.8-4.3-.1-.9.2-1.6.6-2Z"></path></svg>
+                <span class="contact__pair">
+                  <span class="contact__label mono" data-i18n="contact.whatsappLabel">WhatsApp</span>
+                  <span class="contact__value">+57 304 211 5334</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/yilberth-galarza-25a863248/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="contact__icon contact__icon--fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.76-1.95C21.4 8.75 22 11.1 22 14.1V21h-4v-6.1c0-1.45-.03-3.3-2.03-3.3-2.03 0-2.34 1.57-2.34 3.2V21h-4V9Z"></path></svg>
+                <span class="contact__pair">
+                  <span class="contact__label mono">LINKEDIN</span>
+                  <span class="contact__value">in/yilberth-galarza</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/YilberthAndres" target="_blank" rel="noopener noreferrer">
+                <svg class="contact__icon contact__icon--fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85l-.01 2.75c0 .26.18.58.69.48A10 10 0 0 0 12 2Z"></path></svg>
+                <span class="contact__pair">
+                  <span class="contact__label mono">GITHUB</span>
+                  <span class="contact__value">YilberthAndres</span>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
     <dialog
       id="profile-lightbox"
       class="profile-lightbox"
@@ -226,327 +902,23 @@
         data-i18n-alt="accessibility.profilePhoto"
       />
     </dialog>
-    <section id="about">
-      <p class="section__text__p1" data-i18n="about.eyebrow">Get To Know More</p>
-      <h1 class="title" data-i18n="about.title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/images/profile/profile-about.webp"
-            width="1000"
-            height="1000"
-            loading="lazy"
-            alt="Profile picture"
-            data-i18n-alt="accessibility.aboutPhoto"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/icons/experience.png"
-                alt="Experience icon"
-                data-i18n-alt="accessibility.experienceIcon"
-                class="icon"
-              />
-              <h3 data-i18n="about.experience">Experience</h3>
-              <p data-i18n="about.years">4+ years</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/icons/education.png"
-                alt="Education icon"
-                data-i18n-alt="accessibility.educationIcon"
-                class="icon"
-              />
-              <h3 data-i18n="about.education">Education</h3>
-              <p data-i18n="about.degree">Systems Engineer</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p data-i18n="about.description">
-              I am passionate about technology and innovation. I am a systems engineer and specialize in programming, with primary experience in PHP, Python, and JavaScript. I have excelled in web application development using frameworks such as Django and Laravel. Additionally, I have expertise in creating REST APIs and managing both SQL and NoSQL databases.
-            </p>
-          </div>
-        </div>
-      </div>
-      <a href="#experience" class="arrow" data-i18n-aria-label="accessibility.nextSection" aria-label="Go to the next section">
-        <img src="./assets/icons/arrow.png" alt="" class="icon" />
-      </a>
-    </section>
-    <section id="experience">
-      <p class="section__text__p1" data-i18n="experience.eyebrow">Explore My</p>
-      <h1 class="title" data-i18n="experience.title">Experience</h1>
-      <article class="career-card">
-        <div class="career-card__header">
-          <div>
-            <p class="career-card__label" data-i18n="experience.professional">Professional Experience</p>
-            <h2 data-i18n="experience.role">Full Stack Developer</h2>
-            <p class="career-card__company" data-i18n="experience.company">Newo SAS — Bogotá, Colombia</p>
-          </div>
-          <span class="career-card__period" data-experience-period>September 2022 — June 2026</span>
-        </div>
-        <p class="career-card__summary" data-i18n="experience.summary">
-          Backend and frontend development with Laravel and PHP, SQL database management, bug fixing, feature development, REST API creation, and remote collaboration.
-        </p>
-      </article>
-      <div class="experience-details-container">
-        <div class="about-containers experience-grid">
-          <div class="details-container skill-card">
-            <h2 class="experience-sub-title" data-i18n="experience.languages">Programming Languages</h2>
-            <div class="article-container skills-grid">
-              <article>
-                <img
-                  src="./assets/icons/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PHP</h3>
-                  <p data-i18n="experience.experienced">Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/icons/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p data-i18n="experience.experienced">Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/icons/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PYTHON</h3>
-                  <p data-i18n="experience.intermediate">Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/icons/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Java</h3>
-                  <p data-i18n="experience.basic">Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/icons/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p data-i18n="experience.basic">Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/icons/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>C#</h3>
-                  <p data-i18n="experience.basic">Basic</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container skill-card">
-            <h2 class="experience-sub-title" data-i18n="experience.frameworks">Frameworks</h2>
-            <div class="article-container skills-grid">
-              <article>
-                <img
-                  src="./assets/icons/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Laravel</h3>
-                  <p data-i18n="experience.experienced">Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/icons/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Yii</h3>
-                  <p data-i18n="experience.basic">Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/icons/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Django</h3>
-                  <p data-i18n="experience.intermediate">Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/icons/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>FastAPI</h3>
-                  <p data-i18n="experience.basic">Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/icons/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>React.js</h3>
-                  <p data-i18n="experience.basic">Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/icons/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Angular</h3>
-                  <p data-i18n="experience.basic">Basic</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a href="#projects" class="arrow" data-i18n-aria-label="accessibility.nextSection" aria-label="Go to the next section">
-        <img src="./assets/icons/arrow.png" alt="" class="icon" />
-      </a>
-    </section>
-    <section id="projects">
-      <p class="section__text__p1" data-i18n="projects.eyebrow">The main projects I have contributed to</p>
-      <h1 class="title" data-i18n="projects.title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers project-grid">
-          <article class="details-container color-container project-card">
-            <div class="project-image-container">
-              <img
-                src="./assets/images/projects/tucolegio.webp"
-                width="512"
-                height="512"
-                loading="lazy"
-                alt="Tucolegio.co"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Tucolegio.co</h2>
-            <p class="project-description" data-i18n="projects.tucolegioDescription">
-              Educational management platform for schools and their communities.
-            </p>
-            <div class="btn-container">
-              <a class="btn btn-color-2 project-btn" href="https://www.tucolegio.co/" target="_blank" rel="noopener noreferrer">
-                <span data-i18n="projects.live">Live</span>
-              </a>
-            </div>
-          </article>
-          <article class="details-container color-container project-card">
-            <div class="project-image-container">
-              <img
-                src="./assets/images/projects/human-data.webp"
-                width="1075"
-                height="882"
-                loading="lazy"
-                alt="Human Data"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Human Data</h2>
-            <p class="project-description" data-i18n="projects.humanDataDescription">
-              Candidate assessment platform with tools for talent management teams.
-            </p>
-            <div class="btn-container">
-              <a class="btn btn-color-2 project-btn" href="https://humandata.com.co/" target="_blank" rel="noopener noreferrer">
-                <span data-i18n="projects.live">Live</span>
-              </a>
-            </div>
-          </article>
-          <article class="details-container color-container project-card">
-            <div class="project-image-container">
-              <img
-                src="./assets/images/projects/d-health.webp"
-                width="877"
-                height="520"
-                loading="lazy"
-                alt="D-HEALTH"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">D-HEALTH</h2>
-            <p class="project-description" data-i18n="projects.dHealthDescription">
-              Business solution for clinical records, scheduling, appointments, and medical reports.
-            </p>
-            <div class="btn-container">
-              <span class="btn btn-color-2 project-btn project-btn--disabled" aria-disabled="true" data-i18n="projects.private">
-                Private project
-              </span>
-            </div>
-          </article>
-        </div>
-      </div>
-      <a href="#contact" class="arrow" data-i18n-aria-label="accessibility.nextSection" aria-label="Go to the next section">
-        <img src="./assets/icons/arrow.png" alt="" class="icon" />
-      </a>
-    </section>
-    <section id="contact">
-      <p class="section__text__p1" data-i18n="contact.eyebrow">Get in Touch</p>
-      <h1 class="title" data-i18n="contact.title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-            <a href="mailto:yilberthgalarza444@gmail.com">
-                <img src="./assets/icons/email.png" alt="Email icon" data-i18n-alt="accessibility.email" class="icon contact-icon email-icon">
-            </a>
-            <p><a href="mailto:yilberthgalarza444@gmail.com">Yilberthgalarza444@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-            <a href="https://wa.me/573042115334" target="_blank" rel="noopener noreferrer">
-                <img src="./assets/icons/whatsapp.png" alt="WhatsApp icon" data-i18n-alt="accessibility.whatsapp" class="icon contact-icon">
-            </a>
-            <p><a href="https://wa.me/573042115334" target="_blank" rel="noopener noreferrer">+57 3042115334</a></p>
-        </div>
-    </div>
-    
-    </section>
-    <footer>
+
+    <footer class="site-footer">
+      <span class="site-footer__legal mono">
+        © <span id="year"></span> Yilberth Andrés — <span data-i18n="footer.rights">All Rights Reserved.</span>
+      </span>
       <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about" data-i18n="nav.about">About</a></li>
-            <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
-            <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
-            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
-          </ul>
-        </div>
+        <ul class="footer-links">
+          <li><a href="#about" data-i18n="nav.about">About</a></li>
+          <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+          <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="#apps" data-i18n="nav.apps">Personal apps</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
       </nav>
-      <p>Copyright &#169; <span id="year"></span> Yilberth Andres. <span data-i18n="footer.rights">All Rights Reserved.</span></p>
+      <span class="site-footer__built mono">VANILLA HTML · CSS · JS</span>
     </footer>
+
     <script src="scripts/i18n.js" defer></script>
     <script src="scripts/main.js" defer></script>
   </body>

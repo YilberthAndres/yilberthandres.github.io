@@ -1,0 +1,371 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <style>
+    body { margin: 0; background: #0B0F0D; }
+    .sheet {
+      --bg: #0B0F0D;
+      --bg-2: #101614;
+      --bg-3: #161E1A;
+      --line: #212A25;
+      --line-2: #2F3A34;
+      --fg: #F1F4EF;
+      --fg-2: #A5B0A9;
+      --fg-3: #6C776F;
+      --accent: #64DBAE;
+      --accent-ink: #06110C;
+      --accent-soft: rgba(100, 219, 174, 0.12);
+      --cyan: #4DD0E1;
+      --cyan-soft: rgba(77, 208, 225, 0.12);
+      font-family: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--fg); text-decoration: none; }
+    a:hover { color: var(--accent); }
+    h1, h2, h3, h4, p, ul, li { margin: 0; padding: 0; }
+    ul { list-style: none; }
+    .em { font-family: 'Instrument Serif', 'Iowan Old Style', Georgia, serif; font-style: italic; font-weight: 400; color: var(--accent); }
+    .mono { font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; }
+  </style>
+</helmet>
+
+<div class="sheet" style="background: var(--bg); color: var(--fg); min-height: 100%; padding: 64px 96px 72px 96px; box-sizing: border-box;">
+
+  <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; padding-bottom: 44px;">
+    <div style="display: flex; flex-direction: column; gap: 22px;">
+      <div style="display: flex; align-items: baseline; gap: 18px;">
+        <span class="mono" style="font-size: 12px; letter-spacing: 0.16em; color: var(--accent);">03</span>
+        <span class="mono" style="font-size: 12px; letter-spacing: 0.16em; color: var(--fg-3);">SELECTED WORK / MOBILE</span>
+      </div>
+      <h2 style="font-size: 44px; font-weight: 500; line-height: 1.1; letter-spacing: -0.035em;">Two apps I designed, built and <span class="em">shipped on my own</span>.</h2>
+    </div>
+    <div style="display: flex; align-items: center; gap: 8px; padding: 6px; border: 1px solid var(--line); border-radius: 999px; background: var(--bg-2);">
+      <span style="display: flex; align-items: center; gap: 9px; height: 44px; padding: 0 22px; border-radius: 999px; font-size: 15px; color: var(--fg-2);">
+        <svg viewBox="0 0 24 24" style="width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round;"><rect x="3" y="4" width="18" height="14" rx="2"></rect><path d="M8 21h8M12 18v3"></path></svg>
+        Web platforms
+        <span class="mono" style="font-size: 11px; opacity: 0.72;">03</span>
+      </span>
+      <span style="display: flex; align-items: center; gap: 9px; height: 44px; padding: 0 22px; border-radius: 999px; font-size: 15px; background: var(--accent); color: var(--accent-ink);">
+        <svg viewBox="0 0 24 24" style="width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round;"><rect x="7" y="2.5" width="10" height="19" rx="2.5"></rect><path d="M11 18.5h2"></path></svg>
+        Mobile apps
+        <span class="mono" style="font-size: 11px; opacity: 0.72;">02</span>
+      </span>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 24px;">
+
+    <article style="display: grid; grid-template-columns: minmax(0, 1fr) 580px; gap: 56px; padding: 44px; background: var(--bg-2); border: 1px solid var(--line); border-radius: 6px;">
+      <div style="display: flex; flex-direction: column; gap: 26px;">
+        <div style="display: flex; align-items: center; gap: 18px;">
+          <img src="vestigra-logo.png" alt="Vestigra app icon" style="display: block; width: 68px; height: 68px; border-radius: 17px;" />
+          <div style="display: flex; flex-direction: column; gap: 7px;">
+            <h3 style="font-size: 32px; font-weight: 500; letter-spacing: -0.03em;">Vestigra</h3>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span class="mono" style="padding: 5px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-size: 10px; letter-spacing: 0.12em;">PERSONAL PROJECT</span>
+              <span class="mono" style="padding: 5px 10px; border: 1px solid var(--line-2); border-radius: 999px; color: var(--fg-3); font-size: 10px; letter-spacing: 0.12em;">ANDROID · NATIVE</span>
+            </div>
+          </div>
+        </div>
+
+        <p style="max-width: 540px; font-size: 20px; line-height: 1.55; color: var(--fg);">
+          Find any name, number or code <span class="em">inside your own photos</span> — without a single image leaving the phone.
+        </p>
+
+        <p style="max-width: 540px; font-size: 16px; line-height: 1.7; color: var(--fg-2);">
+          Everything happens on the device: text recognition, the search index and the highlight geometry all live in the app's private storage. Indexing only runs while the app is open, and only after the user says yes.
+        </p>
+
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <h4 class="mono" style="font-size: 11px; font-weight: 500; letter-spacing: 0.16em; color: var(--fg-3);">WHAT I BUILT</h4>
+          <ul style="display: flex; flex-direction: column; gap: 12px;">
+            <li style="display: flex; gap: 12px; font-size: 15px; line-height: 1.55; color: var(--fg-2);"><span style="margin-top: 8px; width: 5px; height: 5px; flex: 0 0 auto; border-radius: 999px; background: var(--accent);"></span>A MediaStore gallery that survives permission changes, deletions and moved files.</li>
+            <li style="display: flex; gap: 12px; font-size: 15px; line-height: 1.55; color: var(--fg-2);"><span style="margin-top: 8px; width: 5px; height: 5px; flex: 0 0 auto; border-radius: 999px; background: var(--accent);"></span>An FTS search index over recognised text: order-independent tokens, prefix matches, normalised digits.</li>
+            <li style="display: flex; gap: 12px; font-size: 15px; line-height: 1.55; color: var(--fg-2);"><span style="margin-top: 8px; width: 5px; height: 5px; flex: 0 0 auto; border-radius: 999px; background: var(--accent);"></span>Word-position geometry so matches can be outlined on thumbnails and inside the photo.</li>
+            <li style="display: flex; gap: 12px; font-size: 15px; line-height: 1.55; color: var(--fg-2);"><span style="margin-top: 8px; width: 5px; height: 5px; flex: 0 0 auto; border-radius: 999px; background: var(--accent);"></span>Read-aloud, translation and a crop editor that always saves a copy, never the original.</li>
+          </ul>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span class="mono" style="padding: 7px 12px; border: 1px solid var(--line-2); border-radius: 999px; font-size: 10px; letter-spacing: 0.1em; color: var(--fg-3);">KOTLIN</span>
+          <span class="mono" style="padding: 7px 12px; border: 1px solid var(--line-2); border-radius: 999px; font-size: 10px; letter-spacing: 0.1em; color: var(--fg-3);">JETPACK COMPOSE</span>
+          <span class="mono" style="padding: 7px 12px; border: 1px solid var(--line-2); border-radius: 999px; font-size: 10px; letter-spacing: 0.1em; color: var(--fg-3);">ML KIT OCR</span>
+          <span class="mono" style="padding: 7px 12px; border: 1px solid var(--line-2); border-radius: 999px; font-size: 10px; letter-spacing: 0.1em; color: var(--fg-3);">ROOM / FTS</span>
+          <span class="mono" style="padding: 7px 12px; border: 1px solid var(--line-2); border-radius: 999px; font-size: 10px; letter-spacing: 0.1em; color: var(--fg-3);">MEDIASTORE</span>
+          <span class="mono" style="padding: 7px 12px; border: 1px solid var(--line-2); border-radius: 999px; font-size: 10px; letter-spacing: 0.1em; color: var(--fg-3);">MATERIAL 3</span>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 12px; padding-top: 4px;">
+          <a href="https://www.vestigra.site" style="display: flex; align-items: center; gap: 9px; height: 50px; padding: 0 24px; border-radius: 999px; background: var(--accent); color: var(--accent-ink); font-size: 15px; font-weight: 500;">
+            vestigra.site
+            <svg viewBox="0 0 24 24" style="width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round;"><path d="M7 17 17 7M9 7h8v8"></path></svg>
+          </a>
+          <span class="mono" style="display: flex; align-items: center; height: 50px; padding: 0 22px; border: 1px solid var(--line-2); border-radius: 999px; font-size: 11px; letter-spacing: 0.1em; color: var(--fg-3);">OFFLINE-FIRST · NO PHOTO UPLOADS</span>
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: center; justify-content: flex-end; gap: 24px;">
+        <div style="width: 250px; height: 516px; padding: 8px; border-radius: 36px; background: #05100B; border: 1px solid var(--line-2); box-sizing: border-box;">
+          <div style="display: flex; flex-direction: column; height: 100%; border-radius: 29px; background: #0F1512; overflow: hidden;">
+            <div style="display: flex; flex-direction: column; gap: 11px; padding: 20px 15px 13px 15px;">
+              <div style="display: flex; align-items: center; justify-content: space-between;">
+                <span style="font-size: 16px; font-weight: 500; color: #E3EDE7;">Vestigra</span>
+                <svg viewBox="0 0 24 24" style="width: 17px; height: 17px; fill: none; stroke: #7E8F86; stroke-width: 1.8; stroke-linecap: round;"><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
+              </div>
+              <div style="display: flex; align-items: center; gap: 10px; height: 40px; padding: 0 13px; border-radius: 999px; background: #1B221E;">
+                <svg viewBox="0 0 24 24" style="width: 15px; height: 15px; fill: none; stroke: #64DBAE; stroke-width: 1.9; stroke-linecap: round;"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg>
+                <span style="font-size: 13px; color: #E3EDE7;">recibo 4820</span>
+              </div>
+              <div style="display: flex; gap: 6px;">
+                <span style="padding: 5px 10px; border-radius: 999px; background: #82F8C9; color: #06110C; font-size: 10px;">All</span>
+                <span style="padding: 5px 10px; border-radius: 999px; border: 1px solid #2B3630; color: #93A399; font-size: 10px;">Screenshots</span>
+                <span style="padding: 5px 10px; border-radius: 999px; border: 1px solid #2B3630; color: #93A399; font-size: 10px;">Camera</span>
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; padding: 0 15px; flex: 1;">
+              <div style="position: relative; height: 100px; border-radius: 10px; background: linear-gradient(150deg, #2A3B33, #1B2721);">
+                <span style="position: absolute; left: 13px; top: 30px; width: 58px; height: 12px; border: 1.5px solid #64DBAE; border-radius: 3px; background: rgba(100,219,174,0.18);"></span>
+                <span style="position: absolute; left: 13px; top: 49px; width: 38px; height: 10px; border: 1.5px solid #64DBAE; border-radius: 3px; background: rgba(100,219,174,0.18);"></span>
+                <span class="mono" style="position: absolute; right: 7px; bottom: 7px; padding: 3px 7px; border-radius: 999px; background: rgba(5,16,11,0.8); color: #82F8C9; font-size: 9px;">+3</span>
+              </div>
+              <div style="position: relative; height: 100px; border-radius: 10px; background: linear-gradient(150deg, #3A3730, #241F1B);">
+                <span style="position: absolute; left: 15px; top: 58px; width: 54px; height: 11px; border: 1.5px solid #64DBAE; border-radius: 3px; background: rgba(100,219,174,0.18);"></span>
+              </div>
+              <div style="height: 100px; border-radius: 10px; background: linear-gradient(150deg, #263540, #172026);"></div>
+              <div style="position: relative; height: 100px; border-radius: 10px; background: linear-gradient(150deg, #33303E, #1F1D26);">
+                <span style="position: absolute; left: 17px; top: 37px; width: 45px; height: 11px; border: 1.5px solid #64DBAE; border-radius: 3px; background: rgba(100,219,174,0.18);"></span>
+              </div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px; margin: 13px 15px 16px 15px; padding: 11px 13px; border-radius: 14px; background: #1B221E;">
+              <div style="display: flex; align-items: center; justify-content: space-between;">
+                <span style="font-size: 11px; color: #93A399;">Indexing photos</span>
+                <span class="mono" style="font-size: 10px; color: #82F8C9;">1 204 / 1 860</span>
+              </div>
+              <span style="display: block; height: 4px; border-radius: 999px; background: #2B3630;"><span style="display: block; width: 65%; height: 4px; border-radius: 999px; background: #64DBAE;"></span></span>
+            </div>
+          </div>
+        </div>
+
+        <div style="width: 250px; height: 516px; padding: 8px; border-radius: 36px; background: #05100B; border: 1px solid var(--line-2); box-sizing: border-box;">
+          <div style="display: flex; flex-direction: column; height: 100%; border-radius: 29px; background: #0F1512; overflow: hidden;">
+            <div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 15px 12px 15px;">
+              <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: none; stroke: #E3EDE7; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round;"><path d="M15 5 8 12l7 7"></path></svg>
+              <span class="mono" style="font-size: 10px; letter-spacing: 0.1em; color: #93A399;">IMG_20260114_1420</span>
+              <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: none; stroke: #93A399; stroke-width: 1.8; stroke-linecap: round;"><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
+            </div>
+            <div style="position: relative; margin: 0 15px; height: 262px; border-radius: 14px; background: linear-gradient(160deg, #33403A, #1A231E); overflow: hidden;">
+              <span style="position: absolute; left: 22px; top: 44px; width: 120px; height: 15px; border-radius: 3px; background: rgba(255,255,255,0.12);"></span>
+              <span style="position: absolute; left: 22px; top: 70px; width: 86px; height: 12px; border-radius: 3px; background: rgba(255,255,255,0.10);"></span>
+              <span style="position: absolute; left: 22px; top: 118px; width: 138px; height: 20px; border: 2px solid #64DBAE; border-radius: 4px; background: rgba(100,219,174,0.22);"></span>
+              <span style="position: absolute; left: 22px; top: 152px; width: 92px; height: 18px; border: 2px solid #64DBAE; border-radius: 4px; background: rgba(100,219,174,0.22);"></span>
+              <span style="position: absolute; left: 22px; top: 190px; width: 104px; height: 12px; border-radius: 3px; background: rgba(255,255,255,0.10);"></span>
+              <span class="mono" style="position: absolute; right: 12px; top: 12px; padding: 4px 9px; border-radius: 999px; background: rgba(5,16,11,0.82); color: #82F8C9; font-size: 9px; letter-spacing: 0.08em;">2 MATCHES</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 9px; margin: 14px 15px 0 15px; padding: 13px; border-radius: 14px; background: #1B221E;">
+              <span class="mono" style="font-size: 9px; letter-spacing: 0.12em; color: #7E8F86;">RECOGNISED TEXT</span>
+              <span style="font-size: 12px; line-height: 1.55; color: #C9D6CF;">Recibo de pago N° <span style="padding: 1px 4px; border-radius: 3px; background: rgba(100,219,174,0.24); color: #E3EDE7;">4820</span> — Riodev SAS, 14 Ene 2026</span>
+            </div>
+            <div style="display: flex; gap: 7px; margin: 14px 15px 16px 15px;">
+              <span style="display: flex; align-items: center; justify-content: center; gap: 6px; flex: 1; height: 40px; border-radius: 999px; background: #82F8C9; color: #06110C; font-size: 11px;">
+                <svg viewBox="0 0 24 24" style="width: 13px; height: 13px; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round;"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M5 15V5h10"></path></svg>
+                Copy text
+              </span>
+              <span style="display: flex; align-items: center; justify-content: center; gap: 6px; flex: 1; height: 40px; border-radius: 999px; border: 1px solid #2B3630; color: #C9D6CF; font-size: 11px;">
+                <svg viewBox="0 0 24 24" style="width: 13px; height: 13px; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round;"><path d="M11 5 6 9H3v6h3l5 4V5Z"></path><path d="M16 9a4 4 0 0 1 0 6"></path></svg>
+                Read aloud
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article style="display: grid; grid-template-columns: 580px minmax(0, 1fr); gap: 56px; padding: 44px; background: var(--bg-2); border: 1px solid var(--line); border-radius: 6px;">
+      <div style="display: flex; align-items: center; justify-content: flex-start; gap: 24px;">
+        <div style="width: 250px; height: 516px; padding: 8px; border-radius: 36px; background: #04121A; border: 1px solid var(--line-2); box-sizing: border-box;">
+          <div style="display: flex; flex-direction: column; height: 100%; border-radius: 29px; background: #F4FAFB; overflow: hidden;">
+            <div style="display: flex; flex-direction: column; gap: 11px; padding: 20px 15px 16px 15px; background: #006A6A;">
+              <div style="display: flex; align-items: center; justify-content: space-between;">
+                <span style="font-size: 15px; font-weight: 500; color: #FFFFFF;">RioPool</span>
+                <span style="display: flex; align-items: center; gap: 6px; padding: 4px 9px; border-radius: 999px; background: rgba(255,255,255,0.16);">
+                  <span style="width: 6px; height: 6px; border-radius: 999px; background: #81C784;"></span>
+                  <span class="mono" style="font-size: 9px; letter-spacing: 0.1em; color: #FFFFFF;">LIVE</span>
+                </span>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 3px;">
+                <span style="font-size: 19px; font-weight: 500; color: #FFFFFF;">Pool 2 — Prototype A</span>
+                <span style="font-size: 11px; color: rgba(255,255,255,0.75);">Updated 12 seconds ago</span>
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; padding: 13px 15px 0 15px;">
+              <div style="display: flex; flex-direction: column; gap: 4px; padding: 11px; border-radius: 12px; background: #FFFFFF; border: 1px solid #DCE7E7;">
+                <span class="mono" style="font-size: 9px; letter-spacing: 0.1em; color: #6B7B7B;">WATER TEMP</span>
+                <span style="font-size: 20px; font-weight: 500; color: #00796B;">27.4 °C</span>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 4px; padding: 11px; border-radius: 12px; background: #FFFFFF; border: 1px solid #DCE7E7;">
+                <span class="mono" style="font-size: 9px; letter-spacing: 0.1em; color: #6B7B7B;">pH</span>
+                <span style="font-size: 20px; font-weight: 500; color: #00838F;">7.2</span>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 4px; padding: 11px; border-radius: 12px; background: #FFFFFF; border: 1px solid #DCE7E7;">
+                <span class="mono" style="font-size: 9px; letter-spacing: 0.1em; color: #6B7B7B;">ORP</span>
+                <span style="font-size: 20px; font-weight: 500; color: #006064;">712 mV</span>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 4px; padding: 11px; border-radius: 12px; background: #FFFFFF; border: 1px solid #DCE7E7;">
+                <span class="mono" style="font-size: 9px; letter-spacing: 0.1em; color: #6B7B7B;">AMBIENT</span>
+                <span style="font-size: 20px; font-weight: 500; color: #E65100;">24.1 °C</span>
+              </div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px; margin: 12px 15px 0 15px; padding: 13px; border-radius: 12px; background: #FFFFFF; border: 1px solid #DCE7E7;">
+              <div style="display: flex; align-items: center; justify-content: space-between;">
+                <span style="font-size: 12px; color: #2C3A3A;">Last 12 hours</span>
+                <span class="mono" style="font-size: 9px; letter-spacing: 0.1em; color: #6B7B7B;">pH</span>
+              </div>
+              <svg viewBox="0 0 200 60" preserveAspectRatio="none" style="width: 100%; height: 52px;">
+                <path d="M0 42 L20 38 L40 44 L60 30 L80 34 L100 22 L120 27 L140 18 L160 24 L180 16 L200 20 L200 60 L0 60 Z" fill="rgba(0,168,168,0.10)" stroke="none"></path>
+                <path d="M0 42 L20 38 L40 44 L60 30 L80 34 L100 22 L120 27 L140 18 L160 24 L180 16 L200 20" fill="none" stroke="#00A8A8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px; margin: 12px 15px 16px 15px; padding: 11px 13px; border-radius: 12px; background: #FFF4E2; border: 1px solid #F0DCBB;">
+              <svg viewBox="0 0 24 24" style="width: 16px; height: 16px; flex: 0 0 auto; fill: none; stroke: #B26A00; stroke-width: 1.8; stroke-linecap: round;"><path d="M12 3 2.5 20h19L12 3Z"></path><path d="M12 10v4M12 17v.5"></path></svg>
+              <div style="display: flex; flex-direction: column; gap: 2px;">
+                <span style="font-size: 12px; color: #7A4B00;">Chlorine below range</span>
+                <span class="mono" style="font-size: 9px; color: #9A7238;">14:02 · PROTOTYPE A</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="width: 250px; height: 516px; padding: 8px; border-radius: 36px; background: #04121A; border: 1px solid var(--line-2); box-sizing: border-box;">
+          <div style="display: flex; flex-direction: column; height: 100%; border-radius: 29px; background: #F4FAFB; overflow: hidden;">
+            <div style="display: flex; flex-direction: column; gap: 4px; padding: 20px 15px 16px 15px; background: #006A6A;">
+              <span class="mono" style="font-size: 9px; letter-spacing: 0.12em; color: rgba(255,255,255,0.75);">CLIENT · RIOGYM</span>
+              <span style="font-size: 19px; font-weight: 500; color: #FFFFFF;">My prototypes</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px; padding: 14px 15px 0 15px;">
+              <div style="display: flex; align-items: center; gap: 11px; padding: 13px; border-radius: 12px; background: #FFFFFF; border: 1px solid #DCE7E7;">
+                <span style="display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; flex: 0 0 auto; border-radius: 10px; background: #E0F2F1;">
+                  <svg viewBox="0 0 24 24" style="width: 17px; height: 17px; fill: none; stroke: #00796B; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;"><path d="M12 3s6 6.4 6 10a6 6 0 0 1-12 0c0-3.6 6-10 6-10Z"></path></svg>
+                </span>
+                <span style="display: flex; flex-direction: column; gap: 2px; flex: 1;">
+                  <span style="font-size: 13px; color: #16211F;">Pool 2 — Prototype A</span>
+                  <span class="mono" style="font-size: 9px; letter-spacing: 0.08em; color: #6B7B7B;">12 SEC AGO</span>
+                </span>
+                <span style="display: flex; align-items: center; gap: 5px; padding: 4px 9px; border-radius: 999px; background: #E8F5E9;">
+                  <span style="width: 6px; height: 6px; border-radius: 999px; background: #2E7D32;"></span>
+                  <span class="mono" style="font-size: 9px; color: #2E7D32;">LIVE</span>
+                </span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 11px; padding: 13px; border-radius: 12px; background: #FFFFFF; border: 1px solid #DCE7E7;">
+                <span style="display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; flex: 0 0 auto; border-radius: 10px; background: #FFF4E2;">
+                  <svg viewBox="0 0 24 24" style="width: 17px; height: 17px; fill: none; stroke: #B26A00; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v4.5l3 1.6"></path></svg>
+                </span>
+                <span style="display: flex; flex-direction: column; gap: 2px; flex: 1;">
+                  <span style="font-size: 13px; color: #16211F;">Kids pool — Prototype B</span>
+                  <span class="mono" style="font-size: 9px; letter-spacing: 0.08em; color: #6B7B7B;">4 MIN AGO</span>
+                </span>
+                <span style="display: flex; align-items: center; gap: 5px; padding: 4px 9px; border-radius: 999px; background: #FFF4E2;">
+                  <span style="width: 6px; height: 6px; border-radius: 999px; background: #B26A00;"></span>
+                  <span class="mono" style="font-size: 9px; color: #B26A00;">DELAYED</span>
+                </span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 11px; padding: 13px; border-radius: 12px; background: #FFFFFF; border: 1px solid #DCE7E7;">
+                <span style="display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; flex: 0 0 auto; border-radius: 10px; background: #FDECEA;">
+                  <svg viewBox="0 0 24 24" style="width: 17px; height: 17px; fill: none; stroke: #C62828; stroke-width: 1.8; stroke-linecap: round;"><path d="M4 4l16 16"></path><path d="M12 19v.5"></path><path d="M5 12a10 10 0 0 1 5-2.7M14 9.4a10 10 0 0 1 5 2.6"></path></svg>
+                </span>
+                <span style="display: flex; flex-direction: column; gap: 2px; flex: 1;">
+                  <span style="font-size: 13px; color: #16211F;">Spa — Prototype C</span>
+                  <span class="mono" style="font-size: 9px; letter-spacing: 0.08em; color: #6B7B7B;">2 H AGO</span>
+                </span>
+                <span style="display: flex; align-items: center; gap: 5px; padding: 4px 9px; border-radius: 999px; background: #FDECEA;">
+                  <span style="width: 6px; height: 6px; border-radius: 999px; background: #C62828;"></span>
+                  <span class="mono" style="font-size: 9px; color: #C62828;">OFFLINE</span>
+                </span>
+              </div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 9px; margin: 14px 15px 0 15px; padding: 13px; border-radius: 12px; background: #E0F2F1; border: 1px solid #C4E3E0;">
+              <span class="mono" style="font-size: 9px; letter-spacing: 0.12em; color: #00696B;">REALTIME CHANNEL</span>
+              <span style="font-size: 12px; line-height: 1.5; color: #16403E;">Connected over WSS · reconnects and resyncs history when the link drops.</span>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: space-around; margin-top: auto; padding: 12px 15px 18px 15px; border-top: 1px solid #DCE7E7; background: #FFFFFF;">
+              <span style="display: flex; flex-direction: column; align-items: center; gap: 4px; color: #00696B;">
+                <svg viewBox="0 0 24 24" style="width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;"><rect x="3" y="3" width="7" height="9" rx="1.5"></rect><rect x="14" y="3" width="7" height="5" rx="1.5"></rect><rect x="14" y="12" width="7" height="9" rx="1.5"></rect><rect x="3" y="16" width="7" height="5" rx="1.5"></rect></svg>
+                <span class="mono" style="font-size: 8px; letter-spacing: 0.08em;">POOLS</span>
+              </span>
+              <span style="display: flex; flex-direction: column; align-items: center; gap: 4px; color: #8AA0A0;">
+                <svg viewBox="0 0 24 24" style="width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;"><path d="M4 18V9M10 18V5M16 18v-6M22 18V3"></path></svg>
+                <span class="mono" style="font-size: 8px; letter-spacing: 0.08em;">HISTORY</span>
+              </span>
+              <span style="display: flex; flex-direction: column; align-items: center; gap: 4px; color: #8AA0A0;">
+                <svg viewBox="0 0 24 24" style="width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;"><circle cx="12" cy="8" r="4"></circle><path d="M4.5 20a7.5 7.5 0 0 1 15 0"></path></svg>
+                <span class="mono" style="font-size: 8px; letter-spacing: 0.08em;">ACCOUNT</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 26px;">
+        <div style="display: flex; align-items: center; gap: 18px;">
+          <span style="display: flex; align-items: center; justify-content: center; width: 68px; height: 68px; border-radius: 17px; background: #FFFFFF; border: 1px solid var(--line-2); box-sizing: border-box;">
+            <img src="riopool-logo.png" alt="RioPool app icon" style="display: block; width: 56px; height: 56px;" />
+          </span>
+          <div style="display: flex; flex-direction: column; gap: 7px;">
+            <h3 style="font-size: 32px; font-weight: 500; letter-spacing: -0.03em;">RioPool</h3>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span class="mono" style="padding: 5px 10px; border-radius: 999px; background: var(--cyan-soft); color: var(--cyan); font-size: 10px; letter-spacing: 0.12em;">PERSONAL PROJECT</span>
+              <span class="mono" style="padding: 5px 10px; border: 1px solid var(--line-2); border-radius: 999px; color: var(--fg-3); font-size: 10px; letter-spacing: 0.12em;">ANDROID · iOS · WEB</span>
+            </div>
+          </div>
+        </div>
+
+        <p style="max-width: 540px; font-size: 20px; line-height: 1.55; color: var(--fg);">
+          Water quality monitoring for swimming pools: sensors report in, the dashboard <span class="em">reacts in real time</span>.
+        </p>
+
+        <p style="max-width: 540px; font-size: 16px; line-height: 1.7; color: var(--fg-2);">
+          A client opens the app and sees every prototype they own, whether it is reporting, falling behind or offline — with the readings behind each one, live and historical.
+        </p>
+
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <h4 class="mono" style="font-size: 11px; font-weight: 500; letter-spacing: 0.16em; color: var(--fg-3);">WHAT I BUILT</h4>
+          <ul style="display: flex; flex-direction: column; gap: 12px;">
+            <li style="display: flex; gap: 12px; font-size: 15px; line-height: 1.55; color: var(--fg-2);"><span style="margin-top: 8px; width: 5px; height: 5px; flex: 0 0 auto; border-radius: 999px; background: var(--cyan);"></span>A layered Flutter client — presentation, application, domain, data — shared across four platforms.</li>
+            <li style="display: flex; gap: 12px; font-size: 15px; line-height: 1.55; color: var(--fg-2);"><span style="margin-top: 8px; width: 5px; height: 5px; flex: 0 0 auto; border-radius: 999px; background: var(--cyan);"></span>Token auth with refresh, plus REST history and a WebSocket channel that resyncs after a drop.</li>
+            <li style="display: flex; gap: 12px; font-size: 15px; line-height: 1.55; color: var(--fg-2);"><span style="margin-top: 8px; width: 5px; height: 5px; flex: 0 0 auto; border-radius: 999px; background: var(--cyan);"></span>A dashboard of metric tiles and charts, with typed error and empty states instead of blank screens.</li>
+            <li style="display: flex; gap: 12px; font-size: 15px; line-height: 1.55; color: var(--fg-2);"><span style="margin-top: 8px; width: 5px; height: 5px; flex: 0 0 auto; border-radius: 999px; background: var(--cyan);"></span>Semantic status colours measured for contrast in both themes, always paired with an icon and a label.</li>
+          </ul>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span class="mono" style="padding: 7px 12px; border: 1px solid var(--line-2); border-radius: 999px; font-size: 10px; letter-spacing: 0.1em; color: var(--fg-3);">FLUTTER</span>
+          <span class="mono" style="padding: 7px 12px; border: 1px solid var(--line-2); border-radius: 999px; font-size: 10px; letter-spacing: 0.1em; color: var(--fg-3);">DART</span>
+          <span class="mono" style="padding: 7px 12px; border: 1px solid var(--line-2); border-radius: 999px; font-size: 10px; letter-spacing: 0.1em; color: var(--fg-3);">REST API</span>
+          <span class="mono" style="padding: 7px 12px; border: 1px solid var(--line-2); border-radius: 999px; font-size: 10px; letter-spacing: 0.1em; color: var(--fg-3);">WEBSOCKETS</span>
+          <span class="mono" style="padding: 7px 12px; border: 1px solid var(--line-2); border-radius: 999px; font-size: 10px; letter-spacing: 0.1em; color: var(--fg-3);">FIREBASE MESSAGING</span>
+          <span class="mono" style="padding: 7px 12px; border: 1px solid var(--line-2); border-radius: 999px; font-size: 10px; letter-spacing: 0.1em; color: var(--fg-3);">MATERIAL 3</span>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 12px; padding-top: 4px;">
+          <a href="https://pool.riogym.site" style="display: flex; align-items: center; gap: 9px; height: 50px; padding: 0 24px; border-radius: 999px; background: var(--fg); color: var(--bg); font-size: 15px; font-weight: 500;">
+            pool.riogym.site
+            <svg viewBox="0 0 24 24" style="width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round;"><path d="M7 17 17 7M9 7h8v8"></path></svg>
+          </a>
+          <span class="mono" style="display: flex; align-items: center; height: 50px; padding: 0 22px; border: 1px solid var(--line-2); border-radius: 999px; font-size: 11px; letter-spacing: 0.1em; color: var(--fg-3);">v1.0.0 · ANDROID · iOS · WEB · WINDOWS</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>
+</x-dc>
+<script data-dc-script data-props='{"$preview":{"width":1440,"height":1620}}'>
+class Component extends DCLogic {}
+</script>
+</body>
+</html>
